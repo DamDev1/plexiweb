@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +14,7 @@
   --secondary-bg: #555555b6;
   --poppin: "Poppins", sans-serif;
   --grotesk: "Space Grotesk", sans-serif;
+  --montserrat: "Montserrat", sans-serif;
 }
 
 body {
@@ -77,7 +78,7 @@ header .toggle {
 }
 #hero-section .container .content h1 {
   font-size: 3.5rem;
-  font-family: var(--poppin);
+  font-family: var(--montserrat);
   color: var(--text-color);
 }
 #hero-section .container .content p {
@@ -85,6 +86,7 @@ header .toggle {
   font-family: var(--poppin);
   margin-top: 1rem;
   width: 80%;
+  line-height: 30px;
 }
 #hero-section .container .content .book-call {
   margin-top: 2rem;
@@ -175,7 +177,7 @@ header .toggle {
 }
 #process .container .process-content h2 {
   color: var(--text-color);
-  font-family: var(--poppin);
+  font-family: var(--montserrat);
   font-size: 40px;
 }
 #process .container .process-content .process {
@@ -211,6 +213,20 @@ header .toggle {
 #process .container .process-content .process .content:nth-child(2) {
   margin-left: 50px;
 }
+#process .container .process-content .process .content:nth-child(2) .content-img {
+  width: 10rem;
+  height: 50px;
+  background: url("../assest/process2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#process .container .process-content .process .content:nth-child(3) .content-img {
+  width: 10rem;
+  height: 50px;
+  background: url("../assest/process3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
 #process .container .process-content .process::after {
   position: absolute;
   content: "";
@@ -227,9 +243,9 @@ header .toggle {
   content: "";
   width: 100px;
   background: url("../assest/Arrow 3.png");
-  height: 150px;
-  left: -50px;
-  bottom: 30px;
+  height: 200px;
+  left: -40px;
+  bottom: 80px;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -245,7 +261,7 @@ header .toggle {
 #offer .container .top h2 {
   font-size: 2rem;
   color: var(--text-color);
-  font-family: var(--poppin);
+  font-family: var(--montserrat);
 }
 #offer .container .top p {
   width: 30%;
@@ -293,10 +309,11 @@ header .toggle {
 #project {
   padding: 3rem 5vw;
   background: var(--secondary-bg);
+  height: 100vh;
 }
 #project .container h2 {
   text-align: center;
-  font-family: var(--poppin);
+  font-family: var(--montserrat);
   color: var(--text-color);
   font-size: 2rem;
 }
@@ -306,8 +323,50 @@ header .toggle {
 #project .container .swiper .swiper-wrapper .swiper-slide {
   width: 250px;
   height: 300px;
-  background: red;
   border-radius: 10px;
+  background: url("../assest/1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
+  background: url("../assest/2.png");
+  background-position: left;
+  background-size: cover;
+}
+#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(3) {
+  background: url("../assest/3.png");
+  background-position: left;
+  background-size: cover;
+}
+#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
+  background: url("../assest/4.png");
+  background-position: left;
+  background-size: cover;
+}
+#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(5) {
+  background: url("../assest/5.png");
+  background-position: left;
+  background-size: cover;
+}
+#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(6) {
+  background: url("../assest/6.png");
+  background-position: left;
+  background-size: cover;
+}
+#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(7) {
+  background: url("../assest/7.png");
+  background-position: left;
+  background-size: cover;
+}
+#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(8) {
+  background: url("../assest/8.png");
+  background-position: left;
+  background-size: cover;
+}
+#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(9) {
+  background: url("../assest/9.jpeg");
+  background-position: left;
+  background-size: cover;
 }
 
 #client-reviews {
@@ -466,11 +525,13 @@ footer .container .left .copyright {
     text-align: center;
   }
   #hero-section .container .content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    width: 100%;
   }
   #hero-section .container .content p {
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
   }
   #offer .container .top {
     display: block;
