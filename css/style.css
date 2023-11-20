@@ -309,7 +309,6 @@ header .toggle {
 #project {
   padding: 3rem 5vw;
   background: var(--secondary-bg);
-  height: 100vh;
 }
 #project .container h2 {
   text-align: center;
@@ -322,7 +321,7 @@ header .toggle {
 }
 #project .container .swiper .swiper-wrapper .swiper-slide {
   width: 250px;
-  height: 300px;
+  height: 350px;
   border-radius: 10px;
   background: url("../assest/1.png");
   background-repeat: no-repeat;
@@ -525,7 +524,7 @@ footer .container .left .copyright {
     text-align: center;
   }
   #hero-section .container .content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     width: 100%;
   }
   #hero-section .container .content p {
