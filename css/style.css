@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@400;500&family=Roboto&family=Space+Grotesk:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@
   --secondary-bg: #555555b6;
   --poppin: "Poppins", sans-serif;
   --grotesk: "Space Grotesk", sans-serif;
-  --montserrat: "Montserrat", sans-serif;
+  --montserrat: "Poppins", sans-serif;
 }
 
 body {
