@@ -7,12 +7,13 @@
 }
 
 :root {
-  --bg-color: #333333;
-  --text-color: #ffffff;
-  --sub-text-color: #bcbbbb;
+  --bg-color: #FFFFFF;
+  --text-color: #4E4E4E ;
+  --sub-text-color: #4E4E4E;
   --primary-color: #7083d9;
-  --secondary-bg: #555555b6;
+  --secondary-bg: #F8F8F8;
   --nav-bg: #555555;
+  --btn-color: #FFFFFF;
   --poppin: "Poppins", sans-serif;
   --grotesk: "Space Grotesk", sans-serif;
   --montserrat: "Poppins", sans-serif;
@@ -34,7 +35,7 @@ header {
   z-index: 99;
 }
 header .logo a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   font-family: var(--grotesk);
   font-size: 1.5rem;
@@ -61,14 +62,14 @@ header .nav-menu ul a:hover {
 header .contact a {
   padding: 10px 20px;
   background: var(--primary-color);
-  color: var(--text-color);
+  color: var(--bg-color);
   text-decoration: none;
   font-family: var(--poppin);
   border-radius: 20px;
 }
 header .toggle {
   display: none;
-  color: white;
+  color: var(--text-color);
   font-size: 23px;
   cursor: pointer;
 }
@@ -100,7 +101,7 @@ header .toggle {
 #hero-section .container .content .book-call a {
   padding: 10px 20px;
   background: var(--primary-color);
-  color: var(--text-color);
+  color: var(--bg-color);
   text-decoration: none;
   font-family: var(--poppin);
   border-radius: 20px;
@@ -152,7 +153,7 @@ header .toggle {
 #showcase .container .showcase .num h2 {
   font-size: 2.5rem;
   font-family: var(--poppin);
-  color: white;
+  color: var(--text-color);
 }
 #showcase .container .showcase .content {
   font-family: var(--poppin);
@@ -470,7 +471,7 @@ header .toggle {
 #contact .container .contact-details .book a {
   padding: 10px 20px;
   background: var(--primary-color);
-  color: var(--text-color);
+  color: var(--btn-color);
   text-decoration: none;
   font-family: var(--poppin);
   border-radius: 20px;
@@ -486,7 +487,7 @@ footer .container {
   grid-template-columns: repeat(2, 50%);
 }
 footer .container .left .logo a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   font-family: var(--grotesk);
   font-size: 1.5rem;
@@ -508,14 +509,14 @@ footer .container .left .social {
   font-size: 18px;
 }
 footer .container .left .social a {
-  color: var(--sub-text-color);
+  color: var(--text-color);
 }
 footer .container .left .newsletter {
   margin-top: 2rem;
   width: 80%;
 }
 footer .container .left .newsletter h2 {
-  color: white;
+  color: var(--text-color);
   font-family: var(--poppin);
   font-weight: 300;
 }
@@ -556,7 +557,7 @@ footer .container .right ul {
   gap: 10px;
 }
 footer .container .right ul a {
-  color: white;
+  color: var(--text-color);
   font-family: var(--poppin);
 }
 footer .container .right .email {
@@ -583,7 +584,7 @@ footer .copyright {
     position: absolute;
     width: 100%;
     left: 0;
-    background: var(--nav-bg);
+    background: var(--secondary-bg);
     top: -300%;
     transition: 0.5s;
   }

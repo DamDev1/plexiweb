@@ -8,12 +8,13 @@
 
 :root {
     // dark mode
-    --bg-color: #333333;
-    --text-color: #ffffff;
-    --sub-text-color: #bcbbbb;
+    --bg-color: #FFFFFF;
+    --text-color: #4E4E4E   ;
+    --sub-text-color: #4E4E4E;
     --primary-color: #7083d9;
-    --secondary-bg: #555555b6;
+    --secondary-bg: #F8F8F8;
     --nav-bg: #555555;
+    --btn-color: #FFFFFF;
 
     // fonts
     --poppin: "Poppins", sans-serif;
@@ -37,7 +38,7 @@ header {
     z-index: 99;
     .logo {
         a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
             font-family: var(--grotesk);
             font-size: 1.5rem;
@@ -73,7 +74,7 @@ header {
         a {
             padding: 10px 20px;
             background: var(--primary-color);
-            color: var(--text-color);
+            color: var(--bg-color);
             text-decoration: none;
             font-family: var(--poppin);
             border-radius: 20px;
@@ -82,7 +83,7 @@ header {
 
     .toggle {
         display: none;
-        color: white;
+        color: var(--text-color);
         font-size: 23px;
         cursor: pointer;
     }
@@ -113,7 +114,7 @@ header {
                 a {
                     padding: 10px 20px;
                     background: var(--primary-color);
-                    color: var(--text-color);
+                    color: var(--bg-color   );
                     text-decoration: none;
                     font-family: var(--poppin);
                     border-radius: 20px;
@@ -169,7 +170,7 @@ header {
                 h2 {
                     font-size: 2.5rem;
                     font-family: var(--poppin);
-                    color: white;
+                    color: var(--text-color);
                 }
             }
             .content {
@@ -529,7 +530,7 @@ header {
                 a {
                     padding: 10px 20px;
                     background: var(--primary-color);
-                    color: var(--text-color);
+                    color: var(--btn-color);
                     text-decoration: none;
                     font-family: var(--poppin);
                     border-radius: 20px;
@@ -549,7 +550,7 @@ footer {
         .left {
             .logo {
                 a {
-                    color: white;
+                    color: var(--text-color);
                     text-decoration: none;
                     font-family: var(--grotesk);
                     font-size: 1.5rem;
@@ -574,7 +575,7 @@ footer {
                 font-size: 18px;
 
                 a {
-                    color: var(--sub-text-color);
+                    color: var(--text-color);
                 }
             }
 
@@ -582,7 +583,7 @@ footer {
                 margin-top: 2rem;
                 width: 80%;
                 h2{
-                    color: white;
+                    color: var(--text-color);
                     font-family: var(--poppin);
                     font-weight: 300;
                 }
@@ -626,7 +627,7 @@ footer {
                 flex-direction: column;
                 gap: 10px;
                 a{
-                    color: white;
+                    color: var(--text-color);
                     font-family: var(--poppin);
                 }
             }
@@ -658,7 +659,7 @@ footer {
             position: absolute;
             width: 100%;
             left: 0;
-            background: var(--nav-bg);
+            background: var(--secondary-bg);
             top: -300%;
             transition: 0.5s;
             ul{
