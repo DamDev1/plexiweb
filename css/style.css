@@ -12,6 +12,7 @@
   --sub-text-color: #bcbbbb;
   --primary-color: #7083d9;
   --secondary-bg: #555555b6;
+  --nav-bg: #555555;
   --poppin: "Poppins", sans-serif;
   --grotesk: "Space Grotesk", sans-serif;
   --montserrat: "Poppins", sans-serif;
@@ -51,6 +52,11 @@ header .nav-menu ul a {
   font-family: var(--poppin);
   text-decoration: none;
   color: var(--text-color);
+  transition: 0.5s;
+}
+header .nav-menu ul a:hover {
+  color: var(--primary-color);
+  transition: 0.5s;
 }
 header .contact a {
   padding: 10px 20px;
@@ -475,6 +481,10 @@ footer {
   padding-bottom: 0;
   background: var(--bg-color);
 }
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
 footer .container .left .logo a {
   color: white;
   text-decoration: none;
@@ -500,13 +510,97 @@ footer .container .left .social {
 footer .container .left .social a {
   color: var(--sub-text-color);
 }
-footer .container .left .copyright {
+footer .container .left .newsletter {
   margin-top: 2rem;
+  width: 80%;
+}
+footer .container .left .newsletter h2 {
+  color: white;
+  font-family: var(--poppin);
+  font-weight: 300;
+}
+footer .container .left .newsletter .email-container {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 20px;
+}
+footer .container .left .newsletter .email-container input {
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  font-size: 18px;
+  outline: 0;
+}
+footer .container .left .newsletter .email-container .send {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+footer .container .right {
+  margin-top: 2rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+footer .container .right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .container .right ul a {
+  color: white;
+  font-family: var(--poppin);
+}
+footer .container .right .email {
+  margin-top: 2rem;
+}
+footer .container .right .email p {
+  font-family: var(--poppin);
+  color: var(--sub-text-color);
+  margin-bottom: 5px;
+}
+footer .container .right .email a {
+  color: var(--sub-text-color);
+  font-family: var(--grotesk);
+}
+footer .copyright {
+  margin-top: 4rem;
+  color: var(--sub-text-color);
+  font-family: var(--poppin);
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   header .nav-menu {
-    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: var(--nav-bg);
+    top: -300%;
+    transition: 0.5s;
+  }
+  header .nav-menu ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    gap: 30px;
+    padding: 30px;
+  }
+  header .nav-menu ul a {
+    display: block;
+  }
+  header .active-nav {
+    top: 5rem;
+    transition: 0.5s;
   }
   header .contact {
     display: none;
@@ -552,8 +646,14 @@ footer .container .left .copyright {
   #contact .container .contact-img img {
     width: 100%;
   }
+  footer .container {
+    display: block;
+  }
   footer .container .left p {
     width: 100%;
+  }
+  footer .container .right {
+    display: block;
   }
 }
 @media (max-width: 800px) {
