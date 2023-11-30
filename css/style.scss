@@ -321,17 +321,25 @@ header {
 
             .offer {
                 background: var(--secondary-bg);
+                height: 500px;
                 padding: 1.5rem;
                 border-radius: 10px;
-                height: 400px;
                 position: relative;
                 opacity: 0.8;
                 transition: 0.5s;
                 cursor: pointer;
+                position: relative;
+
+                .offerImage{
+                    width: 100%;
+                    height: 15vw;
+                    background: red;
+                    margin-bottom: 10px;
+                }
 
                 span {
                     font-family: var(--poppin);
-                    color: white;
+                    color: var(--nav-bg);
                 }
 
                 p {
@@ -344,7 +352,7 @@ header {
                     position: absolute;
                     bottom: 20px;
                     a {
-                        color: white;
+                        color: var(--sub-text-color);
                         font-family: var(--poppin);
                     }
                 }

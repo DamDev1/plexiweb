@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@400;500&family=Roboto&family=Space+Grotesk:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #4e4e4e;
+  --sub-text-color: #4e4e4e;
+  --primary-color: #7083d9;
+  --secondary-bg: #f8f8f8;
+  --nav-bg: #555555;
+  --btn-color: #ffffff;
+  --poppin: "Poppins", sans-serif;
+  --grotesk: "Space Grotesk", sans-serif;
+  --montserrat: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5vw;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--bg-color);
+  z-index: 99;
+}
+header .logo a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--grotesk);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+header .logo a span {
+  color: var(--primary-color);
+}
+header .nav-menu ul {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+header .nav-menu ul a {
+  font-family: var(--poppin);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 0.5s;
+}
+header .nav-menu ul a:hover {
+  color: var(--primary-color);
+  transition: 0.5s;
+}
+header .contact a {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  text-decoration: none;
+  font-family: var(--poppin);
+  border-radius: 20px;
+}
+header .toggle {
+  display: none;
+  color: var(--text-color);
+  font-size: 23px;
+  cursor: pointer;
+}
+
+#hero-section {
+  margin-top: 10rem;
+  padding: 0rem 5vw;
+}
+#hero-section .container .project-image {
+  width: 100%;
+  height: 450px;
+  background: url("../../assest/1.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+}
+#hero-section .container .project-image::before {
+  content: "";
+  width: 100%;
+  height: 450px;
+  background: rgba(63, 62, 62, 0.473);
+  position: absolute;
+  border-radius: 10px;
+}
+#hero-section .container .project-content {
+  margin-top: 1rem;
+}
+#hero-section .container .project-content h4 {
+  font-family: var(--montserrat);
+  color: var(--nav-bg);
+  font-size: 1.2rem;
+}
+#hero-section .container .project-content p {
+  margin-top: 1rem;
+  font-family: var(--poppin);
+  font-size: 1rem;
+}
+
+#more-project {
+  margin-top: 3rem;
+}
+#more-project .container .project-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+#more-project .container .project-images .project {
+  width: 100%;
+  height: 400px;
+  background: url("../../assest/1.png");
+  background-position: center;
+  background-size: cover;
+}
+
+footer {
+  padding: 3rem 5vw;
+  padding-bottom: 0;
+  background: var(--bg-color);
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+footer .container .left .logo a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--grotesk);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+footer .container .left .logo a span {
+  color: var(--primary-color);
+}
+footer .container .left p {
+  margin-top: 1rem;
+  color: var(--sub-text-color);
+  font-family: var(--poppin);
+  width: 50%;
+}
+footer .container .left .social {
+  margin-top: 1rem;
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+footer .container .left .social a {
+  color: var(--text-color);
+}
+footer .container .left .newsletter {
+  margin-top: 2rem;
+  width: 80%;
+}
+footer .container .left .newsletter h2 {
+  color: var(--text-color);
+  font-family: var(--poppin);
+  font-weight: 300;
+}
+footer .container .left .newsletter .email-container {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 20px;
+}
+footer .container .left .newsletter .email-container input {
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  font-size: 18px;
+  outline: 0;
+}
+footer .container .left .newsletter .email-container .send {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+}
+footer .container .right {
+  margin-top: 2rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+footer .container .right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .container .right ul a {
+  color: var(--text-color);
+  font-family: var(--poppin);
+}
+footer .container .right .email {
+  margin-top: 2rem;
+}
+footer .container .right .email p {
+  font-family: var(--poppin);
+  color: var(--sub-text-color);
+  margin-bottom: 5px;
+}
+footer .container .right .email a {
+  color: var(--sub-text-color);
+  font-family: var(--grotesk);
+}
+footer .copyright {
+  margin-top: 4rem;
+  color: var(--sub-text-color);
+  font-family: var(--poppin);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  header .nav-menu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: var(--secondary-bg);
+    top: -300%;
+    transition: 0.5s;
+  }
+  header .nav-menu ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    gap: 30px;
+    padding: 30px;
+  }
+  header .nav-menu ul a {
+    display: block;
+  }
+  header .active-nav {
+    top: 5rem;
+    transition: 0.5s;
+  }
+  header .contact {
+    display: none;
+  }
+  header .toggle {
+    display: block;
+  }
+  #hero-section {
+    margin-top: 7rem;
+    padding: 0;
+  }
+  #hero-section .container .project-image {
+    border-radius: 0;
+  }
+  #hero-section .container .project-image::before {
+    border-radius: 0;
+  }
+  #hero-section .container .project-content {
+    padding: 5vw;
+  }
+  footer .container {
+    display: block;
+  }
+  footer .container .left p {
+    width: 100%;
+  }
+  footer .container .right {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */

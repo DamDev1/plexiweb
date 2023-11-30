@@ -283,17 +283,24 @@ header .toggle {
 }
 #offer .container .offer-container .offer {
   background: var(--secondary-bg);
+  height: 500px;
   padding: 1.5rem;
   border-radius: 10px;
-  height: 400px;
   position: relative;
   opacity: 0.8;
   transition: 0.5s;
   cursor: pointer;
+  position: relative;
+}
+#offer .container .offer-container .offer .offerImage {
+  width: 100%;
+  height: 15vw;
+  background: red;
+  margin-bottom: 10px;
 }
 #offer .container .offer-container .offer span {
   font-family: var(--poppin);
-  color: white;
+  color: var(--nav-bg);
 }
 #offer .container .offer-container .offer p {
   margin-top: 1rem;
@@ -305,7 +312,7 @@ header .toggle {
   bottom: 20px;
 }
 #offer .container .offer-container .offer .readmore a {
-  color: white;
+  color: var(--sub-text-color);
   font-family: var(--poppin);
 }
 #offer .container .offer-container .offer:hover {
