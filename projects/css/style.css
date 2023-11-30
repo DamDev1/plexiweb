@@ -75,43 +75,41 @@ header .toggle {
 }
 
 #hero-section {
-  margin-top: 10rem;
-  padding: 0rem 5vw;
+  margin-top: 6rem;
 }
 #hero-section .container .project-image {
   width: 100%;
-  height: 450px;
+  height: 600px;
   background: url("../../assest/1.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 10px;
-  position: relative;
 }
 #hero-section .container .project-image::before {
   content: "";
   width: 100%;
-  height: 450px;
+  height: 600px;
   background: rgba(63, 62, 62, 0.473);
   position: absolute;
-  border-radius: 10px;
-}
-#hero-section .container .project-content {
-  margin-top: 1rem;
-}
-#hero-section .container .project-content h4 {
-  font-family: var(--montserrat);
-  color: var(--nav-bg);
-  font-size: 1.2rem;
-}
-#hero-section .container .project-content p {
-  margin-top: 1rem;
-  font-family: var(--poppin);
-  font-size: 1rem;
 }
 
 #more-project {
-  margin-top: 3rem;
+  padding: 3rem 5vw;
+  background: var(--bg-color);
+}
+#more-project .project-content h4 {
+  color: var(--sub-text-color);
+  font-family: var(--poppin);
+  font-size: 1.3rem;
+}
+#more-project .project-content p {
+  margin-top: 1rem;
+  font-family: var(--poppin);
+  width: 80%;
+  font-size: 1rem;
+}
+#more-project .container {
+  margin-top: 2rem;
 }
 #more-project .container .project-images {
   display: grid;
@@ -124,6 +122,67 @@ header .toggle {
   background: url("../../assest/1.png");
   background-position: center;
   background-size: cover;
+}
+
+.other-projects {
+  padding: 5vw;
+}
+.other-projects .head h1 {
+  color: var(--text-color);
+  font-family: var(--poppin);
+}
+.other-projects .other-projects-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 2rem;
+  overflow-y: scroll;
+}
+.other-projects .other-projects-container a .project {
+  width: 180px;
+  height: 200px;
+  background: red;
+}
+
+#contact {
+  padding: 5rem 5vw;
+  background: var(--secondary-bg);
+}
+#contact .container {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+}
+#contact .container .contact-img {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .container .contact-img img {
+  width: 90%;
+}
+#contact .container .contact-details h2 {
+  color: var(--text-color);
+  font-size: 2rem;
+  font-family: var(--poppin);
+}
+#contact .container .contact-details p {
+  margin-top: 1rem;
+  font-family: var(--poppin);
+  color: var(--sub-text-color);
+  width: 80%;
+}
+#contact .container .contact-details .book {
+  margin-top: 2rem;
+}
+#contact .container .contact-details .book a {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: var(--btn-color);
+  text-decoration: none;
+  font-family: var(--poppin);
+  border-radius: 20px;
 }
 
 footer {
@@ -259,7 +318,7 @@ footer .copyright {
     display: block;
   }
   #hero-section {
-    margin-top: 7rem;
+    margin-top: 5rem;
     padding: 0;
   }
   #hero-section .container .project-image {
@@ -270,6 +329,16 @@ footer .copyright {
   }
   #hero-section .container .project-content {
     padding: 5vw;
+  }
+  #more-project .project-content p {
+    width: 100%;
+  }
+  #contact .container {
+    display: block;
+    gap: 20px;
+  }
+  #contact .container .contact-img img {
+    width: 100%;
   }
   footer .container {
     display: block;
