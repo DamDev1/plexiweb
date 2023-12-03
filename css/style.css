@@ -294,9 +294,13 @@ header .toggle {
 }
 #offer .container .offer-container .offer .offerImage {
   width: 100%;
-  height: 15vw;
-  background: red;
+  height: 200px;
+  background: url("https://www.creativeboom.com/uploads/articles/64/644ca21957dba94677be2cc81eec28297f453566_810.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 #offer .container .offer-container .offer span {
   font-family: var(--poppin);
@@ -318,6 +322,36 @@ header .toggle {
 #offer .container .offer-container .offer:hover {
   opacity: 1;
   transition: 0.5s;
+}
+#offer .container .offer-container .offer:nth-child(2) .offerImage {
+  width: 100%;
+  height: 200px;
+  background: url("https://www.usnews.com/dims4/USNEWS/fb6e5fb/2147483647/crop/2000x1334+0+2/resize/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F65%2F62%2Fc9cb60d24ac89d56462b1228574a%2F201009-codingcomputer-stock.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+#offer .container .offer-container .offer:nth-child(3) .offerImage {
+  width: 100%;
+  height: 200px;
+  background: url("https://img.freepik.com/free-vector/seo-analytics-team-concept-illustration_114360-9205.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+#offer .container .offer-container .offer:nth-child(4) .offerImage {
+  width: 100%;
+  height: 200px;
+  background: url("https://www.themmachine.com/wp-content/uploads/logo-design-the-m-machine-0ct-2023-blog.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 #project {
