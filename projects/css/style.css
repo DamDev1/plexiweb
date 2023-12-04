@@ -21,6 +21,7 @@
 
 body {
   background: var(--bg-color);
+  height: 100vh;
 }
 
 header {

@@ -1,3 +1,7 @@
+var Scrollbar = window.Scrollbar;
+
+Scrollbar.init(document.querySelector('body'));
+
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
