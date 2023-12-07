@@ -129,8 +129,9 @@ header {
             margin-top: 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 10px;
+            gap: 20px;
             a{
+                text-decoration: none;
                 .project{
                     width: 100%;
                     height: 300px;
@@ -195,7 +196,24 @@ header {
                         background-size: cover;
                     }
                 }
+                .project-name{
+                    margin-top: 1rem;
                 
+                    .type{
+                        color: var(--sub-text-color);
+                        font-family: var(--montserrat);
+                        font-weight: bold;
+                        font-size: 0.9rem;
+                    }
+
+                    .name{
+                        font-size: 1.2rem;
+                        margin-top: 2px;
+                        color: rgba(0, 0, 0, 0.856);
+                        font-weight: bold;
+                        font-family: var(--montserrat);
+                    }
+                }
             }
         }
     }

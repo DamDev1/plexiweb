@@ -98,6 +98,7 @@ header {
         grid-template-columns: repeat(2, 50%);
         align-items: center;
         .content {
+            opacity: 1;
             h1 {
                 font-size: 3.5rem;
                 font-family: var(--montserrat);
@@ -128,6 +129,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 1;
             img {
                 width: 80%;
             }
@@ -138,6 +140,7 @@ header {
         margin-top: 5vw;
         display: flex;
         justify-content: space-between;
+        opacity: 1;
         img {
             width: 70%;
         }

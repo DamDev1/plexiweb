@@ -1,7 +1,3 @@
-var Scrollbar = window.Scrollbar;
-
-Scrollbar.init(document.querySelector('body'));
-
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
@@ -23,3 +19,37 @@ var swiper = new Swiper(".mySwiper", {
   const toggle = document.querySelector(".toggle").addEventListener("click", () =>{
     document.querySelector(".nav-menu").classList.toggle("active-nav")
   })
+
+
+  // GSAP ANIMATION
+
+const heroContent = document.querySelector("#hero-section .container .content");
+
+const heroImage = document.querySelector("#hero-section .container .hero-image");
+
+gsap.from("header", 1 ,{
+  y: -300,
+  opacity: 0
+})
+
+gsap.from(heroContent, 2 ,{
+  x: -300,
+  opacity: 0
+})
+
+gsap.from(heroImage, 2 ,{
+  x: 300,
+  opacity: 0
+})
+
+
+gsap.from(".partners", 2, {
+  x: 300,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".partners",
+    start: "+=-700",
+    markers: true,
+
+  }
+})

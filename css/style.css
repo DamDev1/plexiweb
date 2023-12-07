@@ -84,6 +84,9 @@ header .toggle {
   grid-template-columns: repeat(2, 50%);
   align-items: center;
 }
+#hero-section .container .content {
+  opacity: 1;
+}
 #hero-section .container .content h1 {
   font-size: 3.5rem;
   font-family: var(--montserrat);
@@ -113,6 +116,7 @@ header .toggle {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
 }
 #hero-section .container .hero-image img {
   width: 80%;
@@ -121,6 +125,7 @@ header .toggle {
   margin-top: 5vw;
   display: flex;
   justify-content: space-between;
+  opacity: 1;
 }
 #hero-section .partners img {
   width: 70%;
