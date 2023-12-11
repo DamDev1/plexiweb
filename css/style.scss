@@ -24,7 +24,7 @@
 
 body {
     background: var(--bg-color);
-    height: 100vh;
+    overflow-x: hidden;
 }
 
 header {
@@ -434,10 +434,11 @@ header {
                     background: url("../assest/1.png");
                     background-repeat: no-repeat;
                     background-size: cover;
+                    background-position: center;
 
                     &:nth-child(2) {
                         background: url("../assest/2.png");
-                        background-position: left;
+                        background-position: center;
                         background-size: cover;
                     }
                     &:nth-child(3) {
