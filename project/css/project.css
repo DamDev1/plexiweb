@@ -120,17 +120,17 @@ header .toggle {
   border-radius: 10px;
 }
 #projects-section .container .projects-container a:nth-child(2) .project {
-  background: url("../../assest/2.png");
+  background: url("../../projects/festivaLive/assest/1.png");
   background-position: center;
   background-size: cover;
 }
 #projects-section .container .projects-container a:nth-child(3) .project {
-  background: url("../../assest/3.png");
+  background: url("../../projects/kindheartcharity/assest/Group 98.png");
   background-position: center;
   background-size: cover;
 }
 #projects-section .container .projects-container a:nth-child(4) .project {
-  background: url("../../assest/4.png");
+  background: url("../../projects/libertymaket/assest/02.png");
   background-position: center;
   background-size: cover;
 }

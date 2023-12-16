@@ -49,7 +49,5 @@ gsap.from(".partners", 2, {
   scrollTrigger: {
     trigger: ".partners",
     start: "+=-700",
-    markers: true,
-
   }
 })

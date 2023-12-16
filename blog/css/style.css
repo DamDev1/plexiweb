@@ -115,7 +115,10 @@ main #hero-section .container .blogs-container .blog {
 main #hero-section .container .blogs-container .blog .blog-image {
   width: 100%;
   height: 250px;
-  background: red;
+  background: url("https://res.cloudinary.com/practicaldev/image/fetch/s--u1bdbest--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/i83z3rdknfrk00mvstsz.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 10px;
 }
 main #hero-section .container .blogs-container .blog .blog-content {
@@ -134,6 +137,30 @@ main #hero-section .container .blogs-container .blog .blog-content .date {
   margin-top: 3rem;
   font-family: var(--poppin);
   color: gray;
+}
+main #hero-section .container .blogs-container .blog:nth-child(2) .blog-image {
+  background: url("https://assets-global.website-files.com/6344c9cef89d6f2270a38908/63b50c88e64eae7e1bb57ca3_00%20Hire%20Web%20Developer.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main #hero-section .container .blogs-container .blog:nth-child(3) .blog-image {
+  background: url("https://res.cloudinary.com/practicaldev/image/fetch/s--IP9nAz6E--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4047ppv6hxgrcg9j11rp.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main #hero-section .container .blogs-container .blog:nth-child(4) .blog-image {
+  background: url("https://res.cloudinary.com/practicaldev/image/fetch/s--0kXi_pEA--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8000q6ue12kquocttgts.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main #hero-section .container .blogs-container .blog:nth-child(5) .blog-image {
+  background: url("https://res.cloudinary.com/practicaldev/image/fetch/s--IP9nAz6E--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4047ppv6hxgrcg9j11rp.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 footer {

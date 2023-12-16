@@ -108,6 +108,14 @@ main {
                     p {
                         font-family: var(--poppin);
                     }
+                    .view {
+                        margin-top: 1rem;
+                        font-family: var(--poppin);
+                        font-size: 1rem;
+                        a {
+                            color: black;
+                        }
+                    }
                 }
             }
 
@@ -122,15 +130,15 @@ main {
                     background-size: cover;
                     height: 400px;
 
-                    &:nth-child(2){
-                        background: url("../assest/Group\ 16.png");
+                    &:nth-child(2) {
+                        background: url("../assest/Group\ 17.png");
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
                     }
 
-                    &:nth-child(3){
-                        background: url("../assest/Group\ 16\ \(1\).png");
+                    &:nth-child(3) {
+                        background: url("../assest/Group\ 18.png");
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -193,35 +201,61 @@ main {
                 font-size: 1.8rem;
             }
 
-            .other-projects-container{
+            .other-projects-container {
                 margin-top: 2rem;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 gap: 10px;
-                a{
+                a {
                     text-decoration: none;
-                    .project{
+                    .project {
                         width: 100%;
                         height: 300px;
-                        background: red;
                         border-radius: 10px;
+                        background: red;
                     }
-                    .project-name{
+                    .project-name {
                         margin-top: 1rem;
-                    
-                        .type{
+
+                        .type {
                             color: var(--sub-text-color);
                             font-family: var(--poppin);
                             font-weight: bold;
                             font-size: 0.9rem;
                         }
-    
-                        .name{
+
+                        .name {
                             font-size: 1.2rem;
                             margin-top: 2px;
                             color: rgba(0, 0, 0, 0.856);
                             font-weight: bold;
                             font-family: var(--poppin);
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        .project {
+                            background: url("../assest/Group\ 19.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        .project {
+                            background: url("../assest/Group\ 97.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                    &:nth-child(3) {
+                        .project {
+                            background: url("../../libertymaket/assest/02.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
                         }
                     }
                 }

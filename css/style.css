@@ -383,42 +383,22 @@ header .toggle {
   background-position: center;
 }
 #project .container .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
-  background: url("../assest/2.png");
+  background: url("../projects/festivaLive/assest/1.png");
   background-position: center;
   background-size: cover;
 }
 #project .container .swiper .swiper-wrapper .swiper-slide:nth-child(3) {
-  background: url("../assest/3.png");
-  background-position: left;
+  background: url("../projects/kindheartcharity/assest/Group 99.png");
+  background-position: center;
   background-size: cover;
 }
 #project .container .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
-  background: url("../assest/4.png");
-  background-position: left;
+  background: url("../projects/libertymaket/assest/1.png");
+  background-position: center;
   background-size: cover;
 }
 #project .container .swiper .swiper-wrapper .swiper-slide:nth-child(5) {
   background: url("../assest/5.png");
-  background-position: left;
-  background-size: cover;
-}
-#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(6) {
-  background: url("../assest/6.png");
-  background-position: left;
-  background-size: cover;
-}
-#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(7) {
-  background: url("../assest/7.png");
-  background-position: left;
-  background-size: cover;
-}
-#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(8) {
-  background: url("../assest/8.png");
-  background-position: left;
-  background-size: cover;
-}
-#project .container .swiper .swiper-wrapper .swiper-slide:nth-child(9) {
-  background: url("../assest/9.jpeg");
   background-position: left;
   background-size: cover;
 }
