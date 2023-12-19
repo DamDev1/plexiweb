@@ -1,14 +1,3 @@
-const showNav = document.querySelector(".showNav")
-
-
-
-alert("hello")
-
-document.querySelector(".close").addEventListener("click", () => {
-    showNav.classList.remove("active")
-})
-
-document.querySelector(".toggle").addEventListener("click", () => {
-    showNav.classList.toggle("active")
-    alert("hello")
-})
+const toggle = document.querySelector(".toggle").addEventListener("click", () =>{
+    document.querySelector(".nav-menu").classList.toggle("active-nav")
+  })
