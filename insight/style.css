@@ -87,8 +87,8 @@ header .toggle {
 
 #hero .hero-content h1 {
     font-family: "Space Grotesk", sans-serif;
-    font-size: 60px;
-    line-height: 80px;
+    font-size: 50px;
+    line-height: 70px;
     color: white;
     font-weight: 400;
 }
@@ -103,8 +103,8 @@ header .toggle {
 
 #hero .hero-content a .connect {
     margin-top: 2rem;
-    font-size: 20px;
-    padding: 20px 40px;
+    font-size: 18px;
+    padding: 15px 30px;
     background: black;
     border: 1px solid rgb(158, 158, 158);
     border-radius: 20px;
@@ -162,7 +162,11 @@ header .toggle {
 #showcase .content-container .top .col-1 .text h2 {
     font-family: "Space Grotesk", sans-serif;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 50px;
+}
+
+#showcase .content-container .top .col-1 .text span img{
+    width: 80%;
 }
 
 #showcase .content-container .top .col-2 {
@@ -524,7 +528,7 @@ footer .copyright {
         font-size: 40px;
     }
     #hero {
-        padding-top: 20%;
+        padding-top: 8rem;
     }
 
     #hero .hero-content h1 {
