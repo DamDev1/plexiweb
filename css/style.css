@@ -136,38 +136,55 @@ header .toggle {
   padding: 3rem 5vw;
   background: var(--secondary-bg);
 }
-#showcase .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+#showcase .container h2 {
+  font-size: 2rem;
+  font-family: var(--montserrat);
   text-align: center;
-  gap: 30px;
 }
-#showcase .container .showcase {
-  margin-top: 20px;
-}
-#showcase .container .showcase .num {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  background: url("../assest/Ellipse 5.png");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
+#showcase .container > p {
+  margin-top: 10px;
+  text-align: center;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
-}
-#showcase .container .showcase .num h2 {
-  font-size: 2.5rem;
   font-family: var(--poppin);
-  color: var(--text-color);
+  font-size: 0.9rem;
 }
-#showcase .container .showcase .content {
+#showcase .container .showcase-content-container {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+#showcase .container .showcase-content-container .showcase-content {
+  margin-top: 1.5rem;
+}
+#showcase .container .showcase-content-container .showcase-content .feature-image {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #7083d9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+#showcase .container .showcase-content-container .showcase-content .showcase-text {
+  margin-top: 20px;
+}
+#showcase .container .showcase-content-container .showcase-content .showcase-text h3 {
+  font-family: var(--montserrat);
+}
+#showcase .container .showcase-content-container .showcase-content .showcase-text p {
+  margin-top: 10px;
   font-family: var(--poppin);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  color: var(--sub-text-color);
+  font-size: 0.9rem;
 }
 
 #process {
