@@ -155,6 +155,7 @@ header {
     .container {
         h2{
             font-size: 2rem;
+            color: var(--text-color);
             font-family: var(--montserrat);
             text-align: center;
         }
@@ -165,7 +166,7 @@ header {
             margin-left: auto;
             margin-right: auto;
             font-family: var(--poppin);
-            font-size: 0.9rem;
+            color: var(--sub-text-color);
         }
 
         .showcase-content-container{
@@ -201,7 +202,8 @@ header {
                     p{
                         margin-top: 10px;
                         font-family: var(--poppin);
-                        font-size: 0.9rem;
+                        font-size: 1rem;
+                        color: var(--sub-text-color);
                     }
                 }
             }
@@ -757,6 +759,14 @@ footer {
                     margin-right: auto;
                     width: 100%;
                 }
+            }
+        }
+    }
+
+    #showcase{
+        .container{
+            p{
+                width: 100%;
             }
         }
     }

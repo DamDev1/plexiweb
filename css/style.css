@@ -138,6 +138,7 @@ header .toggle {
 }
 #showcase .container h2 {
   font-size: 2rem;
+  color: var(--text-color);
   font-family: var(--montserrat);
   text-align: center;
 }
@@ -148,7 +149,7 @@ header .toggle {
   margin-left: auto;
   margin-right: auto;
   font-family: var(--poppin);
-  font-size: 0.9rem;
+  color: var(--sub-text-color);
 }
 #showcase .container .showcase-content-container {
   margin-top: 4rem;
@@ -184,7 +185,8 @@ header .toggle {
 #showcase .container .showcase-content-container .showcase-content .showcase-text p {
   margin-top: 10px;
   font-family: var(--poppin);
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: var(--sub-text-color);
 }
 
 #process {
@@ -670,6 +672,9 @@ footer .copyright {
   #hero-section .container .content p {
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
+  }
+  #showcase .container p {
     width: 100%;
   }
   #offer .container .top {
