@@ -28,6 +28,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 header .container{
@@ -37,6 +38,7 @@ header .container{
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
+    background: var(--bg-color);
 }
 
 header .container nav .nav-links{
@@ -99,4 +101,80 @@ main #hero-section{
 #hero-section .container-col .hero-image span{
     margin-top: 1rem;
     color: rgb(99, 97, 97);
+}
+
+#showcase{
+    margin-top: 2rem;
+}
+
+#showcase .showcase-container .showcase-conpanies{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#showcase .showcase-container .showcase-conpanies span img{
+    width: 80%;
+}
+
+#showcase .showcase-container .services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 5vw;
+    margin-top: 3rem;
+}
+
+#showcase .showcase-container .services-container .left h3{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#showcase .showcase-container .services-container .right .more-services{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 3rem;
+}
+
+#showcase .showcase-container .services-container .right .more-services .services-content{
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+#showcase .showcase-container .services-container .right .more-services .services-content .caption{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#showcase .showcase-container .services-container .right .more-services .services-content .caption .open-close{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#showcase .showcase-container .services-container .right .more-services .services-content .caption .open-close span{
+    width: 15px;
+    height: 2px;
+    background: white;
+    display: block;
+}
+
+.more-services .services-content .caption .open-close span:nth-child(1){
+    margin-bottom: -12px;
+}
+
+.more-services .services-content .caption .open-close span:nth-child(2){
+    rotate: 90deg;
+}
+
+#showcase .showcase-container .services-container .right .more-services .services-content .message{
+    display: none;
+}
+
+#showcase .showcase-container .services-container .right .more-services .view-service a{
+    text-decoration: underline;
 }
