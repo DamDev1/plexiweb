@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg-color: #1B1B1C;
+    --text-color: #fff;
+    --font-inter: 'Inter', sans-serif;
+}
+
+body{
+    background: var(--bg-color);
+    font-family: var(--font-inter);
+    color: var(--text-color);
+}
+
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+/* -------------------HEADER STYLE */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header .container{
+    padding: 2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .container nav .nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+
+main{
+    margin-top: 12rem;
+}
+
+main #hero-section{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero-section .container-col{
+    padding: 0 5vw;
+}
+
+#hero-section .container-col .col-1 h1{
+    font-size: 4rem;
+}
+
+#hero-section .container-col .col-1 .hero-content{
+    position: relative;
+    margin-top: 3rem;
+}
+
+#hero-section .container-col .col-1 .hero-content .content{
+    position: absolute;
+    width: 50%;
+    right: 0;
+}
+
+#hero-section .container-col .col-1 .hero-content .content p{
+    margin-bottom: 2rem;
+}
+
+#hero-section .container-col .col-1 .hero-content .content a{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+#hero-section .container-col .hero-image {
+    margin-top: 15rem;
+}
+
+#hero-section .container-col .hero-image .image{
+    width: 100%;
+    height: 400px;
+    background: red;
+    margin-bottom: 10px;
+}
+
+#hero-section .container-col .hero-image span{
+    margin-top: 1rem;
+    color: rgb(99, 97, 97);
+}
