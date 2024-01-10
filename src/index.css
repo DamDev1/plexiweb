@@ -420,3 +420,8 @@ footer .container .social{
     display: flex;
     gap: 25px;
 }
+
+
+footer .container .social span{
+    text-transform: capitalize;
+}
