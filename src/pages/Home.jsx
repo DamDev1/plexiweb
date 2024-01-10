@@ -125,42 +125,133 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Work we proud of */}
-        <div id="work-container">
-          <div className="text-box">
-            <h1>WORK WE'RE PROUD OF</h1>
-            <p>
-              100+ businesses and non-profits have trusted us with their brand.
-              You can too.
-            </p>
+      </section>
+
+      <section id="work-section">
+        <div className="container">
+          <div className="head">
+            <h3>Work We're proud of</h3>
+            <div className="head-content">
+              <p>100+ businesses and non-profits have trusted us</p>
+              <Link>VIEW ALL WORK</Link>
+            </div>
           </div>
-          <div className="view-work">
-            <Link>View all work</Link>
-          </div>
-          <div className="work-col-1">
-            <div className="left">
-              <p>BRAND REFRESH</p>
-              <h3>Enamel Dentistry</h3>
-              <p>Local / Service Business</p>
+
+          <div className="work-container">
+            <div className="work">
+              <div className="work-content">
+                <span>BRAND REFRESH</span>
+                <h4>Enamel Dentistry</h4>
+                <p>Local / Service Business</p>
+              </div>
+              <div className="work-image"></div>
             </div>
 
-            <div className="right"></div>
+            <div className="work-display">
+              <div className="work-2">
+                <div className="work-image"></div>
+                <div className="work-content">
+                  <span>BRAND REFRESH</span>
+                  <h4>Enamel Dentistry</h4>
+                  <p>Local / Service Business</p>
+                </div>
+              </div>
+
+              <div className="work-2">
+                <div className="work-image"></div>
+                <div className="work-content">
+                  <span>BRAND REFRESH</span>
+                  <h4>Enamel Dentistry</h4>
+                  <p>Local / Service Business</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="projects-container">
-          <div className="project">
-            <div className="img-card"></div>
-            <div className="project-desc">
-              <p>BRAND REFRESH</p>
-              <h2>Philip Brideaux</h2>
+      </section>
+
+      <section id="process-section">
+        <div className="container">
+          <div className="head">
+            <h3>Our Process Is Easy</h3>
+            <Link>LET'S TALK</Link>
+          </div>
+
+          <div className="process-step">
+            <div className="step">
+              <span>1</span>
+              <div className="step-content">
+                <h5>Discover</h5>
+                <p>We'll unpack everything
+                  about your business and
+                  industry.</p>
+              </div>
+            </div>
+
+            <div className="step">
+              <span>2</span>
+              <div className="step-content">
+                <h5>Design</h5>
+                <p>We design and build your new
+                  and improved brand and
+                  Webflow website — fast.</p>
+              </div>
+            </div>
+
+            <div className="step">
+              <span>3</span>
+              <div className="step-content">
+                <h5>Launch</h5>
+                <p>We test, refine, and go-live
+                  with a brand image you can
+                  be proud of and 100% own.</p>
+              </div>
             </div>
           </div>
-          <div className="project">
-            <div className="img-card"></div>
-            <div className="project-desc">
-              <p>BRAND REFRESH</p>
-              <h2>NGMarketing</h2>
+
+          <div className="process-image-container">
+            <div className="image"></div>
+            <div className="image"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimony">
+        <div className="container">
+          <div className="head">
+            <span>50+ Raving Reviews: What Sets Us Apart</span>
+            <span>1--10</span>
+          </div>
+
+          <div className="testimony-content">
+            <div className="testimony">
+              <p>"He and his team brought a professional, insightful, creative
+                approach to building us a website that perfectly serves our
+                needs."</p>
+              <div className="client">
+                <div className="client-image"></div>
+                <div className="client-content">
+                  <span className="client-name">Jeremy John</span>
+                  <span>Director of Technology</span>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="book">
+        <div className="container">
+          <h2>
+            Ready To
+            Hit Refresh?
+          </h2>
+          <div className="book-content">
+            <p>When it comes to your brand and website design, you
+              don't need to struggle or try figure it out on your own.</p>
+            <p>Let us help you get it right and create a standout brand
+image you can be proud of.</p>
+            <Link>BOOK A CALL</Link>
           </div>
         </div>
       </section>
