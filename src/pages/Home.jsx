@@ -162,6 +162,38 @@ export default function Home() {
               <h2>NGMarketing</h2>
             </div>
           </div>
+          <div className="project">
+            <div className="img-card"></div>
+            <div className="project-desc">
+              <p>BRAND REFRESH</p>
+              <h2>NGMarketing</h2>
+            </div>
+          </div>
+        </div>
+        {/* Product process  */}
+
+        <div className="process-container">
+          <div className="process-header">
+            <h1>OUR PROCESS IS EASY</h1>
+            <div className="process-link">
+            <Link>LET'S TALK</Link>
+          </div>
+          </div>
+         
+          <div className="process-details">
+            <div className="process">
+              <h1>DISCOVER</h1>
+              <p>We’ll unpack everything about your business and industry.</p>
+            </div>
+            <div className="process">
+              <h1>DESIGN</h1>
+              <p>We’ll unpack everything about your business and industry.</p>
+            </div>
+            <div className="process">
+              <h1>LAUNCH</h1>
+              <p>We’ll unpack everything about your business and industry.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
