@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import Home from "./pages/Home";
+import Works from "./pages/Works";
 
 
 const route = createBrowserRouter([
@@ -11,6 +12,9 @@ const route = createBrowserRouter([
       {
         index: true,
         element: <Home/>
+      },{
+        path: 'works',
+        element: <Works />
       }
     ]
   }
@@ -26,3 +30,5 @@ function App(){
 }
 
 export default App
+
+// gsap

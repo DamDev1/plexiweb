@@ -1,0 +1,29 @@
+#work-container {
+  max-width: 1300px;
+  margin: 100px 50px;
+}
+
+#work-container .work-hero {
+  margin: 20px 100px;
+}
+#work-container .work-hero h1 {
+  color: white;
+  font-size: 50px;
+
+  width: 0px;
+}
+#work-container .work-hero p{
+    width: 340px;
+}
+#work-container .work-hero .work-hero-link {
+    display: inline-block;
+    float: right;
+    margin-top: 40px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: transform 300ms;
+}
+#work-container .work-hero .work-hero-link:hover{
+    transform: scale(1.1);
+}

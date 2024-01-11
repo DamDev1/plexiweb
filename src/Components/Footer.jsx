@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -8,11 +9,11 @@ export default function Footer() {
           <span>© 2023 PLEXIWEB</span>
         </div>
         <div className="social">
-          <span>INSTAGRAM</span>
-          <span>X/Twitter</span>
-          <span>LinkedIn</span>
-          <span>Dribbble</span>
-          <span>Privacy</span>
+          <Link>INSTAGRAM</Link>
+          <Link>X/Twitter</Link>
+          <Link>LinkedIn</Link>
+          <Link>Dribbble</Link>
+          <Link>Privacy</Link>
         </div>
       </div>
     </footer>

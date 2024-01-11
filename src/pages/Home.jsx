@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -133,7 +134,7 @@ export default function Home() {
             <h3>Work We're proud of</h3>
             <div className="head-content">
               <p>100+ businesses and non-profits have trusted us</p>
-              <Link>VIEW ALL WORK</Link>
+              <Link to="/works">VIEW ALL WORK</Link>
             </div>
           </div>
 
@@ -182,9 +183,7 @@ export default function Home() {
               <span>1</span>
               <div className="step-content">
                 <h5>Discover</h5>
-                <p>We'll unpack everything
-                  about your business and
-                  industry.</p>
+                <p>We'll unpack everything about your business and industry.</p>
               </div>
             </div>
 
@@ -192,9 +191,10 @@ export default function Home() {
               <span>2</span>
               <div className="step-content">
                 <h5>Design</h5>
-                <p>We design and build your new
-                  and improved brand and
-                  Webflow website — fast.</p>
+                <p>
+                  We design and build your new and improved brand and Webflow
+                  website — fast.
+                </p>
               </div>
             </div>
 
@@ -202,9 +202,10 @@ export default function Home() {
               <span>3</span>
               <div className="step-content">
                 <h5>Launch</h5>
-                <p>We test, refine, and go-live
-                  with a brand image you can
-                  be proud of and 100% own.</p>
+                <p>
+                  We test, refine, and go-live with a brand image you can be
+                  proud of and 100% own.
+                </p>
               </div>
             </div>
           </div>
@@ -225,9 +226,11 @@ export default function Home() {
 
           <div className="testimony-content">
             <div className="testimony">
-              <p>"He and his team brought a professional, insightful, creative
+              <p>
+                "He and his team brought a professional, insightful, creative
                 approach to building us a website that perfectly serves our
-                needs."</p>
+                needs."
+              </p>
               <div className="client">
                 <div className="client-image"></div>
                 <div className="client-content">
@@ -242,17 +245,41 @@ export default function Home() {
 
       <section id="book">
         <div className="container">
-          <h2>
-            Ready To
-            Hit Refresh?
-          </h2>
+          <h2>Ready To Hit Refresh?</h2>
           <div className="book-content">
-            <p>When it comes to your brand and website design, you
-              don't need to struggle or try figure it out on your own.</p>
-            <p>Let us help you get it right and create a standout brand
-image you can be proud of.</p>
+            <p>
+              When it comes to your brand and website design, you don't need to
+              struggle or try figure it out on your own.
+            </p>
+            <p>
+              Let us help you get it right and create a standout brand image you
+              can be proud of.
+            </p>
             <Link>BOOK A CALL</Link>
           </div>
+        </div>
+      </section>
+      <section id="mailing-list">
+        <div className="design-studio">
+          <div className="img-card"></div>
+          <p>DESIGN STUDIO</p>
+        </div>
+        <div className="mailing-text">
+          <p>JOIN OUR MONTHLY MAILING LIST</p>
+        </div>
+        <div className="mailing-email">
+          <input type="text" placeholder="YOUR EMAIL ADDRESS" />
+          <span>
+            <FaArrowRight />
+          </span>
+        </div>
+      </section>
+      <section id="email-section">
+        <div className="email-text">
+          <h1>Let’s make something great together</h1>
+        </div>
+        <div className="email-text">
+          <h1>hello@Plexiweb.com</h1>
         </div>
       </section>
     </main>
