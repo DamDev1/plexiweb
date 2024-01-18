@@ -22,7 +22,9 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-image">
-            <div className="image"></div>
+            <div className="image">
+              
+            </div>
             <span>Khu·la / Kh·ula</span>
           </div>
         </div>
@@ -145,12 +147,12 @@ export default function Home() {
                 <h4>Enamel Dentistry</h4>
                 <p>Local / Service Business</p>
               </div>
-              <div className="work-image"></div>
+              <div className="work-image image"></div>
             </div>
 
             <div className="work-display">
               <div className="work-2">
-                <div className="work-image"></div>
+                <div className="work-image image"></div>
                 <div className="work-content">
                   <span>BRAND REFRESH</span>
                   <h4>Enamel Dentistry</h4>
@@ -159,7 +161,7 @@ export default function Home() {
               </div>
 
               <div className="work-2">
-                <div className="work-image"></div>
+                <div className="work-image image"></div>
                 <div className="work-content">
                   <span>BRAND REFRESH</span>
                   <h4>Enamel Dentistry</h4>
@@ -240,7 +242,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>      
+        </div>
       </section>
 
       <section id="book">

@@ -15,6 +15,7 @@ body {
     background: var(--bg-color);
     font-family: var(--font-inter);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 a {
@@ -45,6 +46,53 @@ header .container nav .nav-links {
     justify-content: space-between;
     align-items: center;
     gap: 50px;
+}
+
+header .container .side-bar{
+    position: absolute;
+    left: -100%;
+    top: 0rem;
+    background: red;
+    height: 100vh;
+    padding: 1rem;
+    width: 40svh;
+    padding-top: 30px;
+    transition: 0.5s;
+}
+
+header .container .side-bar .nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+header .container .side-bar .nav-links a{
+    font-size: 1.5rem;
+}
+
+header .container .active-side-bar{
+    position: absolute;
+    left: 0%;
+    top: 0rem;
+    background: red;
+    height: 100vh;
+    padding: 1rem;
+    width: 40svh;
+    padding-top: 30px;
+}
+
+header .container .active-side-bar .nav-links{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+header .container .active-side-bar .nav-links a{
+    font-size: 1.5rem;
+}
+
+.toggle{
+    display: none;
 }
 
 main {
@@ -92,7 +140,10 @@ main #hero-section {
 #hero-section .container-col .hero-image .image {
     width: 100%;
     height: 400px;
-    background: red;
+    background: url("../public/heroImage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 10px;
 }
 
@@ -103,16 +154,19 @@ main #hero-section {
 
 #showcase {
     margin-top: 2rem;
+    display: none;
 }
 
 #showcase .showcase-container .showcase-conpanies {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
 }
 
-#showcase .showcase-container .showcase-conpanies span img {
-    width: 80%;
+#showcase .showcase-container .showcase-conpanies span{
+    width: 300px;
+    height: 100px;
+    background: red;
 }
 
 #showcase .showcase-container .services-container {
@@ -227,7 +281,10 @@ main #hero-section {
 .work-container .work .work-image {
     width: 100%;
     height: 350px;
-    background: red;
+    background: url("../public/project1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .work-container .work-display {
@@ -240,8 +297,21 @@ main #hero-section {
 .work-container .work-display .work-2 .work-image {
     width: 100%;
     height: 350px;
-    background: red;
+    background: url("../public/project2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.work-container .work-display .work-2:nth-child(2) .work-image {
+    width: 100%;
+    height: 350px;
+    background: url("../public/project3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .work-container .work-display .work-2 .work-content {
     margin-top: 1.4rem;
@@ -326,7 +396,19 @@ main #hero-section {
 .process-image-container .image{
     width: 100%;
     height: 300px;
-    background: red;
+    background: url("../public/process.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.process-image-container .image:nth-child(2) {
+    width: 100%;
+    height: 300px;
+    background: url("../public/app-store-checklist-header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #testimony{
@@ -381,6 +463,7 @@ main #hero-section {
 #book .container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 #book .container h2{
@@ -396,6 +479,8 @@ main #hero-section {
 #book .container .book-content a{
     text-decoration: underline;
 }
+
+
 #mailing-list{
     width: 80%;
     max-width: 1300px;
@@ -403,16 +488,16 @@ main #hero-section {
     border-bottom: 1px solid white;
     border-top: 1px solid white;
     margin: 100px auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    gap: 20px;
 }
 #mailing-list .design-studio .img-card{
     height: 50px;
     width: 50px;
     background-color: white;
-    margin: 10px 40px;
-}
-#mailing-list .mailing-text{
-    margin:30px auto ;
+    margin-bottom: 10px;
 }
 #mailing-list .mailing-email{
     margin: 30px ;
@@ -458,8 +543,9 @@ footer{
 }
 
 footer .container{ 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 footer .container .right span{
@@ -468,11 +554,122 @@ footer .container .right span{
 
 
 footer .container .social{
-    display: flex;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 
 footer .container .social span{
     text-transform: capitalize;
+}
+
+@media(max-width: 768px){
+    header .container nav{
+        display: none;
+    }
+    header .container .contact{
+        display: none;
+    }
+
+    header .container .active-side-bar{
+        position: absolute;
+        left: 0%;
+        top: 0rem;
+        background: var(--bg-color);
+        height: 100vh;
+        padding: 1rem;
+        width: 40svh;
+        padding-top: 30px;
+        transition: 0.5s;
+    }
+    
+    header .container .active-side-bar .nav-links{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 4rem;
+    }
+    
+    header .container .active-side-bar .nav-links a{
+        font-size: 1.5rem;
+    }
+
+    .active-side-bar .close{
+        position: absolute;
+        right: 1rem;
+        font-size: 1.5rem;
+        font-weight:400;
+        cursor: pointer;
+    }
+
+    .toggle{
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+
+    main {
+        margin-top: 9rem;
+    }
+
+
+    
+
+    #hero-section .container-col .col-1 .hero-content .content{
+        width: 100%;
+    }
+
+    .work-container .work .work-image{
+        margin-top: 1.2rem;
+    }
+    #showcase .showcase-container .services-container .right{
+        margin-top: 1rem;
+    }
+
+    #testimony .container .testimony-content .testimony p{
+        width: 100%;
+    }
+
+    #mailing-list .mailing-text{
+        margin-top: 20px;
+    }
+
+    #mailing-list .mailing-email input::placeholder{
+        padding-left: 0px;
+    }
+
+    #mailing-list .mailing-email{
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+    #email-section{
+        display: none;
+    }
+
+    footer .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    footer .container .right{
+        color: gray;
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 428px){
+    #hero-section .container-col .col-1 h1 {
+        font-size: 3rem;
+    }
+
+    #work-section .container .head .head-content a{
+        display: none;
+    }
+
+    #process-section .container .head a{
+        display: none;
+    }
 }
