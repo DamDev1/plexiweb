@@ -1,11 +1,44 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [sections, setSections] = useState([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const top = window.scrollY;
+
+      sections.forEach((sec) => {
+        const offset = sec.offsetTop;
+        const height = sec.offsetHeight;
+
+        if (top >= offset && top < offset + height) {
+          sec.classList.add('showAnimation');
+        } else {
+          sec.classList.remove('showAnimation');
+        }
+      });
+    };
+
+    // Set up event listener on component mount
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [sections]);
+
+  useEffect(() => {
+    // Update sections when the component mounts or when sections change in the DOM
+    const updatedSections = document.querySelectorAll('section');
+    setSections(Array.from(updatedSections));
+  }, []);
   return (
     <main>
-      <section id="hero-section">
+      <section id="hero-section" className="sec-1 showAnimation">
         <div className="container-col">
           <div className="col-1">
             <h1>YOUR BRAND IMAGE MATTERS</h1>
@@ -23,14 +56,14 @@ export default function Home() {
           </div>
           <div className="hero-image">
             <div className="image">
-              
+
             </div>
             <span>Khu·la / Kh·ula</span>
           </div>
         </div>
       </section>
 
-      <section id="showcase">
+      <section id="showcase" className="sec-2">
         <div className="showcase-container">
           <div className="showcase-conpanies">
             <span>
