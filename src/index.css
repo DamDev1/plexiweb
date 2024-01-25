@@ -95,11 +95,16 @@ header .container .active-side-bar .nav-links a{
     display: none;
 }
 
+main{
+    margin-top: 9rem;
+    transition: 0.5s;
+}
+
 main #hero-section {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-}
+} 
 
 #hero-section .container-col {
     padding: 0 5vw;
@@ -277,7 +282,7 @@ main #hero-section {
 .work-container .work .work-image {
     width: 100%;
     height: 350px;
-    background: url("../public/project1.png");
+    background: url("/project1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -293,7 +298,7 @@ main #hero-section {
 .work-container .work-display .work-2 .work-image {
     width: 100%;
     height: 350px;
-    background: url("../public/project2.png");
+    background: url("/project2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -302,7 +307,7 @@ main #hero-section {
 .work-container .work-display .work-2:nth-child(2) .work-image {
     width: 100%;
     height: 350px;
-    background: url("../public/project3.png");
+    background: url("/project3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -392,7 +397,7 @@ main #hero-section {
 .process-image-container .image{
     width: 100%;
     height: 300px;
-    background: url("../public/process.webp");
+    background: url("/process.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -401,7 +406,7 @@ main #hero-section {
 .process-image-container .image:nth-child(2) {
     width: 100%;
     height: 300px;
-    background: url("../public/app-store-checklist-header.png");
+    background: url("/app-store-checklist-header.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -666,70 +671,3 @@ footer .container .social span{
 
 
 /* animation */
-section{
-    transition: 1s;
-}
-.sec-1{
-    padding-top: 8rem;
-    transition: 2s;
-}
-
-.sec-1 h1{
-    transform: translateX(-100%);
-    transition: 5s;
-    opacity: 0;
-}
-
-.sec-1.showAnimation h1{
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.sec-1 .hero-content{
-    transform: translateX(100%);
-    transition: 5s;
-    opacity: 0;
-}
-
-.sec-1.showAnimation .hero-content{
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.sec-1 .hero-image{
-    scale: 0.5;
-    transition: 2s;
-}
-
-.sec-1.sec-1.showAnimation .hero-image{
-    scale: 1;
-    transition: 2s;
-}
-
-.sec-2{
-    padding-top: 10rem;
-}
-
-.sec-2 .services-container .left{
-    transform: translate(-50%);
-    opacity: 0;
-    transition: 1s;
-}
-
-.sec-2.showAnimation .services-container .left{
-    transform: translate(0%);
-    opacity: 1;
-    transition: 1s;
-}
-
-.sec-2 .services-container .right{
-    opacity: 0;
-    transform: translateY(-10%);
-    transition: 2s;
-}
-
-.sec-2.showAnimation .services-container .right{
-    opacity: 1;
-    transition: 2s;
-    transform: translateY(0);
-}

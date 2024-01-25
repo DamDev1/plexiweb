@@ -1,49 +1,52 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { useEffect, useState } from 'react';
+import AOS from "aos";
+import 'aos/dist/aos.css'; 
 
 export default function Home() {
-  const [sections, setSections] = useState([]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const top = window.scrollY;
-
-      sections.forEach((sec) => {
-        const offset = sec.offsetTop;
-        const height = sec.offsetHeight;
-
-        if (top >= offset && top < offset + height) {
-          sec.classList.add('showAnimation');
-        } else {
-          sec.classList.remove('showAnimation');
-        }
-      });
-    };
-
-    // Set up event listener on component mount
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [sections]);
-
-  useEffect(() => {
-    // Update sections when the component mounts or when sections change in the DOM
-    const updatedSections = document.querySelectorAll('section');
-    setSections(Array.from(updatedSections));
+    AOS.init({
+      duration: 800, // Duration of animations (in milliseconds)
+      easing: 'ease', // Easing function for animations
+    });
   }, []);
+
+
+  let contentRef = useRef(null)
+
+  useEffect(() =>{
+    let currentPos = window.pageYOffset;
+
+    const callDistort =() =>{
+      const newPos = window.pageYOffset;
+      const diff = newPos - currentPos;
+      const speed = diff * 0.35;
+
+      if(contentRef.current){
+        contentRef.current.style.transform = `skewY(${speed}deg)`
+      }
+      currentPos = newPos;
+      requestAnimationFrame(callDistort);
+    }
+
+    callDistort();
+
+    return() =>{
+      cancelAnimationFrame(callDistort)
+    }
+  })
+
   return (
-    <main>
+    <main className="main" ref={contentRef}>
       <section id="hero-section" className="sec-1 showAnimation">
         <div className="container-col">
           <div className="col-1">
-            <h1>YOUR BRAND IMAGE MATTERS</h1>
+            <h1 data-aos="fade-right">YOUR BRAND IMAGE MATTERS</h1>
             <div className="hero-content">
-              <div className="content">
+              <div className="content" data-aos="fade-left">
                 <p>
                   Plexiweb is a strategy-led design studio specializing in brand
                   refreshes. We help service-based solopreneurs & small business
@@ -55,7 +58,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-image">
-            <div className="image">
+            <div className="image" data-aos="zoom-out-down">
 
             </div>
             <span>Khu·la / Kh·ula</span>
@@ -87,10 +90,10 @@ export default function Home() {
           </div>
 
           <div className="services-container">
-            <div className="left">
+            <div className="left" data-aos="fade-right">
               <h3>tired of staring at your</h3>
             </div>
-            <div className="right">
+            <div className="right" data-aos="fade-left">
               <p>
                 An old and boring brand identity and website can leave your
                 customers feeling confused, uncertain, and searching for
@@ -117,7 +120,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="services-content">
+                <div className="services-content" >
                   <div className="caption">
                     <span>A single point of contact</span>
                     <div className="open-close">
@@ -165,7 +168,7 @@ export default function Home() {
 
       <section id="work-section">
         <div className="container">
-          <div className="head">
+          <div className="head" data-aos="fade-down">
             <h3>Work We're proud of</h3>
             <div className="head-content">
               <p>100+ businesses and non-profits have trusted us</p>
@@ -175,16 +178,16 @@ export default function Home() {
 
           <div className="work-container">
             <div className="work">
-              <div className="work-content">
+              <div className="work-content" data-aos="fade-right">
                 <span>BRAND REFRESH</span>
                 <h4>Enamel Dentistry</h4>
                 <p>Local / Service Business</p>
               </div>
-              <div className="work-image image"></div>
+              <div data-aos="fade-left" className="work-image image"></div>
             </div>
 
             <div className="work-display">
-              <div className="work-2">
+              <div data-aos="fade-up" className="work-2">
                 <div className="work-image image"></div>
                 <div className="work-content">
                   <span>BRAND REFRESH</span>
@@ -193,7 +196,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="work-2">
+              <div data-aos="fade-up" className="work-2">
                 <div className="work-image image"></div>
                 <div className="work-content">
                   <span>BRAND REFRESH</span>
@@ -208,13 +211,13 @@ export default function Home() {
 
       <section id="process-section">
         <div className="container">
-          <div className="head">
+          <div className="head"  data-aos="fade-down">
             <h3>Our Process Is Easy</h3>
             <Link>LET'S TALK</Link>
           </div>
 
           <div className="process-step">
-            <div className="step">
+            <div className="step"  data-aos="fade-right"  data-aos-duration="1000">
               <span>1</span>
               <div className="step-content">
                 <h5>Discover</h5>
@@ -222,7 +225,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="step">
+            <div className="step" data-aos="fade-right"  data-aos-duration="3000">
               <span>2</span>
               <div className="step-content">
                 <h5>Design</h5>
@@ -233,7 +236,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="step">
+            <div className="step" data-aos="fade-right"  data-aos-duration="5000">
               <span>3</span>
               <div className="step-content">
                 <h5>Launch</h5>
@@ -246,15 +249,15 @@ export default function Home() {
           </div>
 
           <div className="process-image-container">
-            <div className="image"></div>
-            <div className="image"></div>
+            <div className="image" data-aos="fade-up"  data-aos-duration="1000"></div>
+            <div className="image" data-aos="fade-up"  data-aos-duration="2000"></div>
           </div>
         </div>
       </section>
 
-      <section id="testimony">
+      <section id="testimony" data-aos="fade-up"  >
         <div className="container">
-          <div className="head">
+          <div className="head" >
             <span>50+ Raving Reviews: What Sets Us Apart</span>
             <span>1--10</span>
           </div>
@@ -280,8 +283,8 @@ export default function Home() {
 
       <section id="book">
         <div className="container">
-          <h2>Ready To Hit Refresh?</h2>
-          <div className="book-content">
+          <h2 data-aos="fade-right">Ready To Hit Refresh?</h2>
+          <div className="book-content" data-aos="fade-left"  >
             <p>
               When it comes to your brand and website design, you don't need to
               struggle or try figure it out on your own.
