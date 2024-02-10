@@ -17,27 +17,27 @@ export default function Home() {
 
   let contentRef = useRef(null)
 
-  useEffect(() =>{
-    let currentPos = window.pageYOffset;
+  // useEffect(() =>{
+  //   let currentPos = window.pageYOffset;
 
-    const callDistort =() =>{
-      const newPos = window.pageYOffset;
-      const diff = newPos - currentPos;
-      const speed = diff * 0.35;
+  //   const callDistort =() =>{
+  //     const newPos = window.pageYOffset;
+  //     const diff = newPos - currentPos;
+  //     const speed = diff * 0.35;
 
-      if(contentRef.current){
-        contentRef.current.style.transform = `skewY(${speed}deg)`
-      }
-      currentPos = newPos;
-      requestAnimationFrame(callDistort);
-    }
+  //     if(contentRef.current){
+  //       contentRef.current.style.transform = `skewY(${speed}deg)`
+  //     }
+  //     currentPos = newPos;
+  //     requestAnimationFrame(callDistort);
+  //   }
 
-    callDistort();
+  //   callDistort();
 
-    return() =>{
-      cancelAnimationFrame(callDistort)
-    }
-  })
+  //   return() =>{
+  //     cancelAnimationFrame(callDistort)
+  //   }
+  // })
 
   return (
     <main className="main" ref={contentRef}>
@@ -172,7 +172,7 @@ export default function Home() {
             <h3>Work We're proud of</h3>
             <div className="head-content">
               <p>100+ businesses and non-profits have trusted us</p>
-              <Link to="/works">VIEW ALL WORK</Link>
+              <Link to="https://www.behance.net/plexiweb_studio" target="_blank">VIEW ALL WORK</Link>
             </div>
           </div>
 
@@ -180,7 +180,7 @@ export default function Home() {
             <div className="work">
               <div className="work-content" data-aos="fade-right">
                 <span>BRAND REFRESH</span>
-                <h4>Enamel Dentistry</h4>
+                <h4>Anon Fashion</h4>
                 <p>Local / Service Business</p>
               </div>
               <div data-aos="fade-left" className="work-image image"></div>
@@ -190,8 +190,8 @@ export default function Home() {
               <div data-aos="fade-up" className="work-2">
                 <div className="work-image image"></div>
                 <div className="work-content">
-                  <span>BRAND REFRESH</span>
-                  <h4>Enamel Dentistry</h4>
+                  <span>WEB DEVELOPMENT</span>
+                  <h4>Artful Nest</h4>
                   <p>Local / Service Business</p>
                 </div>
               </div>
@@ -199,8 +199,8 @@ export default function Home() {
               <div data-aos="fade-up" className="work-2">
                 <div className="work-image image"></div>
                 <div className="work-content">
-                  <span>BRAND REFRESH</span>
-                  <h4>Enamel Dentistry</h4>
+                  <span>WEB DEVELOPMENT</span>
+                  <h4>Metalink</h4>
                   <p>Local / Service Business</p>
                 </div>
               </div>
@@ -213,7 +213,7 @@ export default function Home() {
         <div className="container">
           <div className="head"  data-aos="fade-down">
             <h3>Our Process Is Easy</h3>
-            <Link>LET'S TALK</Link>
+            <Link >LET'S TALK</Link>
           </div>
 
           <div className="process-step">
@@ -265,14 +265,14 @@ export default function Home() {
           <div className="testimony-content">
             <div className="testimony">
               <p>
-                "He and his team brought a professional, insightful, creative
+                "Plexiweb Studio team brought a professional, insightful, creative
                 approach to building us a website that perfectly serves our
                 needs."
               </p>
               <div className="client">
                 <div className="client-image"></div>
                 <div className="client-content">
-                  <span className="client-name">Jeremy John</span>
+                  <span className="client-name">Mary J.</span>
                   <span>Director of Technology</span>
                 </div>
               </div>
@@ -293,7 +293,7 @@ export default function Home() {
               Let us help you get it right and create a standout brand image you
               can be proud of.
             </p>
-            <Link>BOOK A CALL</Link>
+            <Link to="https://calendly.com/plexiwebstudio/30min">BOOK A CALL</Link>
           </div>
         </div>
       </section>
@@ -317,7 +317,7 @@ export default function Home() {
           <h1>Let’s make something great together</h1>
         </div>
         <div className="email-text">
-          <h1>hello@Plexiweb.com</h1>
+          <Link>hello@Plexiweb.com</Link>
         </div>
       </section>
     </main>

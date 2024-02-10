@@ -48,7 +48,7 @@ header .container nav .nav-links {
     gap: 50px;
 }
 
-header .container .side-bar{
+header .container .side-bar {
     position: absolute;
     left: -100%;
     top: 0rem;
@@ -60,17 +60,17 @@ header .container .side-bar{
     transition: 0.5s;
 }
 
-header .container .side-bar .nav-links{
+header .container .side-bar .nav-links {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-header .container .side-bar .nav-links a{
+header .container .side-bar .nav-links a {
     font-size: 1.5rem;
 }
 
-header .container .active-side-bar{
+header .container .active-side-bar {
     position: absolute;
     left: 0%;
     top: 0rem;
@@ -81,21 +81,21 @@ header .container .active-side-bar{
     padding-top: 30px;
 }
 
-header .container .active-side-bar .nav-links{
+header .container .active-side-bar .nav-links {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-header .container .active-side-bar .nav-links a{
+header .container .active-side-bar .nav-links a {
     font-size: 1.5rem;
 }
 
-.toggle{
+.toggle {
     display: none;
 }
 
-main{
+main {
     margin-top: 9rem;
     transition: 0.5s;
 }
@@ -104,7 +104,7 @@ main #hero-section {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-} 
+}
 
 #hero-section .container-col {
     padding: 0 5vw;
@@ -164,7 +164,7 @@ main #hero-section {
     display: none;
 }
 
-#showcase .showcase-container .showcase-conpanies span{
+#showcase .showcase-container .showcase-conpanies span {
     width: 300px;
     height: 100px;
     background: red;
@@ -313,7 +313,6 @@ main #hero-section {
     background-size: cover;
 }
 
-
 .work-container .work-display .work-2 .work-content {
     margin-top: 1.4rem;
 }
@@ -383,18 +382,18 @@ main #hero-section {
     font-size: 1.2rem;
 }
 
-#process-section .container .process-step .step .step-content p{
+#process-section .container .process-step .step .step-content p {
     margin-top: 5px;
 }
 
-.process-image-container{
+.process-image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     margin-top: 4vw;
 }
 
-.process-image-container .image{
+.process-image-container .image {
     width: 100%;
     height: 300px;
     background: url("/process.webp");
@@ -412,48 +411,50 @@ main #hero-section {
     background-size: cover;
 }
 
-#testimony{
+#testimony {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
     padding: 2rem 5vw;
 }
 
-#testimony .container .head{
+#testimony .container .head {
     display: flex;
     justify-content: space-between;
-}   
+}
 
-#testimony .container .testimony-content{
+#testimony .container .testimony-content {
     margin-top: 2rem;
 }
 
-#testimony .container .testimony-content .testimony p{
+#testimony .container .testimony-content .testimony p {
     font-size: 1.4rem;
     width: 50%;
 }
 
-#testimony .container .testimony-content .testimony .client{
+#testimony .container .testimony-content .testimony .client {
     margin-top: 2rem;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#testimony .container .testimony-content .testimony .client .client-image{
+#testimony .container .testimony-content .testimony .client .client-image {
     width: 50px;
     height: 50px;
-    background: red;
+    background: url("/public/client.jpeg");
     border-radius: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-
-#testimony .container .testimony-content .testimony .client .client-content{
+#testimony .container .testimony-content .testimony .client .client-content {
     display: flex;
     flex-direction: column;
 }
 
-#book{
+#book {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -461,28 +462,27 @@ main #hero-section {
     margin-top: 10vw;
 }
 
-#book .container{
+#book .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-#book .container h2{
+#book .container h2 {
     font-size: 2.5rem;
 }
 
-#book .container .book-content{
+#book .container .book-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#book .container .book-content a{
+#book .container .book-content a {
     text-decoration: underline;
 }
 
-
-#mailing-list{
+#mailing-list {
     width: 80%;
     max-width: 1300px;
     padding: 40px 0;
@@ -494,14 +494,14 @@ main #hero-section {
     align-items: center;
     gap: 20px;
 }
-#mailing-list .design-studio .img-card{
+#mailing-list .design-studio .img-card {
     height: 50px;
     width: 50px;
     background-color: white;
     margin-bottom: 10px;
 }
-#mailing-list .mailing-email{
-    margin: 30px ;
+#mailing-list .mailing-email {
+    margin: 30px;
     position: relative;
 }
 #mailing-list .mailing-email input {
@@ -513,29 +513,37 @@ main #hero-section {
     outline: none;
     color: white;
 }
-#mailing-list .mailing-email input::placeholder{
+#mailing-list .mailing-email input::placeholder {
     padding-left: 10px;
 }
-#mailing-list .mailing-email span{
+#mailing-list .mailing-email span {
     top: 10px;
     right: 5px;
     position: absolute;
     cursor: pointer;
 }
-#email-section{
+#email-section {
     max-width: 1300px;
     display: flex;
-    margin: 40px 150px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#email-section .email-text h1{
+#email-section .email-text h1 {
     font-size: 35px;
     width: 400px;
 }
-#email-section > :nth-child(2){
+
+#email-section .email-text a{
+    font-size: 35px;
+    width: 400px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#email-section > :nth-child(2) {
     margin-top: 100px;
 }
-footer{
+footer {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -543,37 +551,35 @@ footer{
     margin-top: 10vw;
 }
 
-footer .container{ 
+footer .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-footer .container .right span{
+footer .container .right span {
     text-transform: capitalize;
 }
 
-
-footer .container .social{
+footer .container .social {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-
-footer .container .social span{
+footer .container .social span {
     text-transform: capitalize;
 }
 
-@media(max-width: 768px){
-    header .container nav{
+@media (max-width: 768px) {
+    header .container nav {
         display: none;
     }
-    header .container .contact{
+    header .container .contact {
         display: none;
     }
 
-    header .container .active-side-bar{
+    header .container .active-side-bar {
         position: absolute;
         left: 0%;
         top: 0rem;
@@ -584,90 +590,87 @@ footer .container .social span{
         padding-top: 30px;
         transition: 0.5s;
     }
-    
-    header .container .active-side-bar .nav-links{
+
+    header .container .active-side-bar .nav-links {
         display: flex;
         flex-direction: column;
         gap: 40px;
         margin-top: 4rem;
     }
-    
-    header .container .active-side-bar .nav-links a{
+
+    header .container .active-side-bar .nav-links a {
         font-size: 1.5rem;
     }
 
-    .active-side-bar .close{
+    .active-side-bar .close {
         position: absolute;
         right: 1rem;
         font-size: 1.5rem;
-        font-weight:400;
+        font-weight: 400;
         cursor: pointer;
     }
 
-    .toggle{
+    .toggle {
         display: block;
         font-size: 1.5rem;
         cursor: pointer;
     }
-    
 
-    #hero-section .container-col .col-1 .hero-content .content{
+    #hero-section .container-col .col-1 .hero-content .content {
         width: 100%;
     }
 
-    .work-container .work .work-image{
+    .work-container .work .work-image {
         margin-top: 1.2rem;
     }
-    #showcase .showcase-container .services-container .right{
+    #showcase .showcase-container .services-container .right {
         margin-top: 1rem;
     }
 
-    #testimony .container .testimony-content .testimony p{
+    #testimony .container .testimony-content .testimony p {
         width: 100%;
     }
 
-    #mailing-list .mailing-text{
+    #mailing-list .mailing-text {
         margin-top: 20px;
     }
 
-    #mailing-list .mailing-email input::placeholder{
+    #mailing-list .mailing-email input::placeholder {
         padding-left: 0px;
     }
 
-    #mailing-list .mailing-email{
+    #mailing-list .mailing-email {
         margin: 0px;
         margin-top: 20px;
     }
 
-    #email-section{
+    #email-section {
         display: none;
     }
 
-    footer .container{
+    footer .container {
         display: flex;
         flex-direction: column-reverse;
     }
 
-    footer .container .right{
+    footer .container .right {
         color: gray;
         margin-top: 10px;
     }
 }
 
-@media(max-width: 428px){
+@media (max-width: 428px) {
     #hero-section .container-col .col-1 h1 {
         font-size: 3rem;
     }
 
-    #work-section .container .head .head-content a{
+    #work-section .container .head .head-content a {
         display: none;
     }
 
-    #process-section .container .head a{
+    #process-section .container .head a {
         display: none;
     }
 }
-
-
 
 /* animation */
