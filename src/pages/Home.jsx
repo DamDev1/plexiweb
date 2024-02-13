@@ -65,7 +65,7 @@ export default function Home() {
                   owners build a standout brand image — one they can be proud
                   of.
                 </p>
-                <Link>explore our work</Link>
+                <Link to="https://www.behance.net/plexiweb_studio">explore our work</Link>
               </div>
             </div>
           </div>
@@ -214,7 +214,7 @@ export default function Home() {
         <div className="container">
           <div className="head" data-aos="fade-down">
             <h3>Our Process Is Easy</h3>
-            <Link >LET'S TALK</Link>
+            <Link to='https://calendly.com/plexiwebstudio/30min'>LET'S TALK</Link>
           </div>
 
           <div className="process-step">

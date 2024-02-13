@@ -6,11 +6,11 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="right">
-          <span>© 2024 PLEXIWEB</span>
+          <span>© 2024 PLEXIWEBSTUDIO</span>
         </div>
         <div className="social">
-          <Link>INSTAGRAM</Link>
-          <Link>X/Twitter</Link>
+          <Link to="https://www.instagram.com/plexiwebstudio/">INSTAGRAM</Link>
+          <Link to="https://twitter.com/PlexiwebStudio">X/Twitter</Link>
           <Link>LinkedIn</Link>
           <Link>Dribbble</Link>
           <Link>Privacy</Link>

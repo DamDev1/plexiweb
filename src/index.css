@@ -52,7 +52,7 @@ header .container .side-bar {
     position: absolute;
     left: -100%;
     top: 0rem;
-    background: red;
+    background: #1b1b1c;
     height: 100vh;
     padding: 1rem;
     width: 40svh;
