@@ -3,9 +3,21 @@ import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import AOS from "aos";
-import 'aos/dist/aos.css'; 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'aos/dist/aos.css';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Autoplay} from 'swiper/modules';
 
 export default function Home() {
+
+  const [faqOne, setFaqOne] = useState(false)
+  const [faqTwo, setFaqTwo] = useState(false)
 
   useEffect(() => {
     AOS.init({
@@ -102,46 +114,38 @@ export default function Home() {
 
               <div className="more-services">
                 <div className="services-content">
-                  <div className="caption">
-                    <span>A single point of contact</span>
+                  <div className="caption" onClick={() => setFaqOne(!faqOne)}>
+                    <span>What types of web development services does Plexiweb Studio offer?</span>
                     <div className="open-close">
                       <span></span>
                       <span></span>
                     </div>
                   </div>
-                  <div className="message">
+                  <div className={!faqOne ? "message" : "showMessage"}>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ipsam laboriosam, nobis optio autem voluptatibus
-                      blanditiis odio, nihil tempore nemo, quibusdam modi at
-                      laudantium cum animi nesciunt saepe deleniti? Sequi,
-                      doloremque.
+                      Plexiweb Studio specializes in comprehensive web development solutions, including full-stack development, front-end development, and back-end development. Whether you need a simple static website or a complex web application, we have the expertise to bring your vision to life.
                     </p>
                   </div>
                 </div>
 
                 <div className="services-content" >
-                  <div className="caption">
-                    <span>A single point of contact</span>
+                  <div className="caption" onClick={() => setFaqTwo(!faqTwo)}>
+                    <span> Can Plexiweb Studio handle the entire web development process from design to deployment?</span>
                     <div className="open-close">
                       <span></span>
                       <span></span>
                     </div>
                   </div>
-                  <div className="message">
+                  <div className={!faqTwo ? "message" : "showMessage"}>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ipsam laboriosam, nobis optio autem voluptatibus
-                      blanditiis odio, nihil tempore nemo, quibusdam modi at
-                      laudantium cum animi nesciunt saepe deleniti? Sequi,
-                      doloremque.
+                      Yes, Plexiweb Studio offers end-to-end web development services, starting from the design phase all the way through development, testing, deployment, and ongoing maintenance. Our goal is to provide a streamlined and hassle-free experience for our clients, allowing them to focus on their core business objectives.
                     </p>
                   </div>
                 </div>
 
                 <div className="services-content">
                   <div className="caption">
-                    <span>A single point of contact</span>
+                    <span>How can I request a consultation or get started with Plexiweb Studio for my web development project?</span>
                     <div className="open-close">
                       <span></span>
                       <span></span>
@@ -149,11 +153,7 @@ export default function Home() {
                   </div>
                   <div className="message">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Ipsam laboriosam, nobis optio autem voluptatibus
-                      blanditiis odio, nihil tempore nemo, quibusdam modi at
-                      laudantium cum animi nesciunt saepe deleniti? Sequi,
-                      doloremque.
+                      Getting started with Plexiweb Studio is easy! Simply reach out to us via our contact form or email, and one of our experienced developers will schedule a consultation to discuss your project requirements and objectives in detail. We look forward to collaborating with you to bring your web development vision to life!
                     </p>
                   </div>
                 </div>
@@ -177,33 +177,34 @@ export default function Home() {
           </div>
 
           <div className="work-container">
-            <div className="work">
+            <Link to="https://anon-ecommerce1.netlify.app
+" className="work">
               <div className="work-content" data-aos="fade-right">
                 <span>BRAND REFRESH</span>
                 <h4>Anon Fashion</h4>
                 <p>Local / Service Business</p>
               </div>
               <div data-aos="fade-left" className="work-image image"></div>
-            </div>
+            </Link>
 
             <div className="work-display">
-              <div data-aos="fade-up" className="work-2">
+              <Link to="https://artful-nest.netlify.app" data-aos="fade-up" className="work-2">
                 <div className="work-image image"></div>
                 <div className="work-content">
                   <span>WEB DEVELOPMENT</span>
                   <h4>Artful Nest</h4>
                   <p>Local / Service Business</p>
                 </div>
-              </div>
+              </Link>
 
-              <div data-aos="fade-up" className="work-2">
+              <Link to="https://metalinks.netlify.app" data-aos="fade-up" className="work-2">
                 <div className="work-image image"></div>
                 <div className="work-content">
                   <span>WEB DEVELOPMENT</span>
                   <h4>Metalink</h4>
                   <p>Local / Service Business</p>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -211,13 +212,13 @@ export default function Home() {
 
       <section id="process-section">
         <div className="container">
-          <div className="head"  data-aos="fade-down">
+          <div className="head" data-aos="fade-down">
             <h3>Our Process Is Easy</h3>
             <Link >LET'S TALK</Link>
           </div>
 
           <div className="process-step">
-            <div className="step"  data-aos="fade-right"  data-aos-duration="1000">
+            <div className="step" data-aos="fade-right" data-aos-duration="1000">
               <span>1</span>
               <div className="step-content">
                 <h5>Discover</h5>
@@ -225,7 +226,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="step" data-aos="fade-right"  data-aos-duration="3000">
+            <div className="step" data-aos="fade-right" data-aos-duration="3000">
               <span>2</span>
               <div className="step-content">
                 <h5>Design</h5>
@@ -236,7 +237,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="step" data-aos="fade-right"  data-aos-duration="5000">
+            <div className="step" data-aos="fade-right" data-aos-duration="5000">
               <span>3</span>
               <div className="step-content">
                 <h5>Launch</h5>
@@ -249,8 +250,8 @@ export default function Home() {
           </div>
 
           <div className="process-image-container">
-            <div className="image" data-aos="fade-up"  data-aos-duration="1000"></div>
-            <div className="image" data-aos="fade-up"  data-aos-duration="2000"></div>
+            <div className="image" data-aos="fade-up" data-aos-duration="1000"></div>
+            <div className="image" data-aos="fade-up" data-aos-duration="2000"></div>
           </div>
         </div>
       </section>
@@ -263,20 +264,93 @@ export default function Home() {
           </div>
 
           <div className="testimony-content">
-            <div className="testimony">
-              <p>
-                "Plexiweb Studio team brought a professional, insightful, creative
-                approach to building us a website that perfectly serves our
-                needs."
-              </p>
-              <div className="client">
-                <div className="client-image"></div>
-                <div className="client-content">
-                  <span className="client-name">Mary J.</span>
-                  <span>Director of Technology</span>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className="testimony">
+                  <p>
+                    "Plexiweb Studio team brought a professional, insightful, creative
+                    approach to building us a website that perfectly serves our
+                    needs."
+                  </p>
+                  <div className="client">
+                    <div className="client-image"></div>
+                    <div className="client-content">
+                      <span className="client-name">Mary J.</span>
+                      <span>Director of Technology</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testimony">
+                  <p>
+                    "I can't thank Plexiweb Studio enough for their outstanding work on my business website. As a small business owner, I needed a professional and affordable solution, and Plexiweb Studio delivered beyond my wildest expectations."
+                  </p>
+                  <div className="client">
+                    <div className="client-image client-five"></div>
+                    <div className="client-content">
+                      <span className="client-name">Blessing R</span>
+                      <span>Small Business Owner</span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testimony">
+                  <p>
+                    "Working with Plexiweb Studio was a game-changer for our startup. Their team's expertise in web development and design helped us launch a stunning website that perfectly reflects our brand identity."
+                  </p>
+                  <div className="client">
+                    <div className="client-image client-two"></div>
+                    <div className="client-content">
+                      <span className="client-name">John D</span>
+                      <span>CEO, Tech Startup</span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testimony">
+                  <p>
+                    "Plexiweb Studio exceeded our expectations with their top-notch web development services. From the initial consultation to the final deployment, they were professional, responsive, and attentive to our needs. Our new e-commerce website is sleek, user-friendly, and has already boosted our online sales. Thank you, Plexiweb Studio"
+                  </p>
+                  <div className="client">
+                    <div className="client-image client-three"></div>
+                    <div className="client-content">
+                      <span className="client-name">Sarah M</span>
+                      <span>Marketing Director, E-commerce Company</span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testimony">
+                  <p>
+                    "Our new e-commerce website is sleek, user-friendly, and has already boosted our online sales. Thank you, Plexiweb Studio!"
+                  </p>
+                  <div className="client">
+                    <div className="client-image client-four"></div>
+                    <div className="client-content">
+                      <span className="client-name">Micheal M</span>
+                      <span>Small Business Owner</span>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </section>

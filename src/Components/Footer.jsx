@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <div className="container">
         <div className="right">
-          <span>© 2023 PLEXIWEB</span>
+          <span>© 2024 PLEXIWEB</span>
         </div>
         <div className="social">
           <Link>INSTAGRAM</Link>
