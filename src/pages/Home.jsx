@@ -13,6 +13,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay} from 'swiper/modules';
+import ScrollTop from "../Components/ScrollTop";
 
 export default function Home() {
 
@@ -51,8 +52,15 @@ export default function Home() {
   //   }
   // })
 
+  const scrollToContent = () => {
+    if (contentRef.current) {
+      contentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <main className="main" ref={contentRef}>
+    <main className="main">
+      <ScrollTop/>
       <section id="hero-section" className="sec-1 showAnimation">
         <div className="container-col">
           <div className="col-1">
@@ -65,12 +73,12 @@ export default function Home() {
                   owners build a standout brand image — one they can be proud
                   of.
                 </p>
-                <Link to="https://www.behance.net/plexiweb_studio">explore our work</Link>
+                <Link onClick={scrollToContent}>explore our work</Link>
               </div>
             </div>
           </div>
           <div className="hero-image">
-            <div className="image" data-aos="zoom-out-down">
+            <div className="image" data-aos="zoom-out-up">
 
             </div>
             <span>Khu·la / Kh·ula</span>
@@ -166,7 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work-section">
+      <section id="work-section" ref={contentRef}>
         <div className="container">
           <div className="head" data-aos="fade-down">
             <h3>Work We're proud of</h3>

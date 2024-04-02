@@ -27,9 +27,9 @@ export default function Header() {
 
         <nav>
           <div className="nav-links">
-            <Link>WORK</Link>
+            <Link>HOME</Link>
             <Link>SERVICES</Link>
-            <Link>CULTURE</Link>
+            <Link>WORK</Link>
             <Link>JOURNAL</Link>
           </div>
         </nav>
@@ -40,9 +40,9 @@ export default function Header() {
         <div className={activeSideBar ? "side-bar" : "active-side-bar"}>
           <div className="close" onClick={handleSideBar}>X</div>
           <div className="nav-links">
-            <Link>WORK</Link>
+            <Link>HOME</Link>
             <Link>SERVICES</Link>
-            <Link>CULTURE</Link>
+            <Link>WORK</Link>
             <Link>JOURNAL</Link>
             <Link>CONTACT</Link>
           </div>

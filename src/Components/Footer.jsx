@@ -13,7 +13,7 @@ export default function Footer() {
           <Link to="https://twitter.com/PlexiwebStudio">X/Twitter</Link>
           <Link>LinkedIn</Link>
           <Link>Dribbble</Link>
-          <Link>Privacy</Link>
+          <Link to="/privacy">Privacy</Link>
         </div>
       </div>
     </footer>
