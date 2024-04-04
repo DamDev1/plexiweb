@@ -15,6 +15,7 @@ body {
     background: var(--bg-color);
     font-family: var(--font-inter);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 a {
@@ -47,8 +48,56 @@ header .container nav .nav-links {
     gap: 50px;
 }
 
+header .container .side-bar {
+    position: absolute;
+    left: -100%;
+    top: 0rem;
+    background: #1b1b1c;
+    height: 100vh;
+    padding: 1rem;
+    width: 40svh;
+    padding-top: 30px;
+    transition: 0.5s;
+}
+
+header .container .side-bar .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+header .container .side-bar .nav-links a {
+    font-size: 1.5rem;
+}
+
+header .container .active-side-bar {
+    position: absolute;
+    left: 0%;
+    top: 0rem;
+    background: red;
+    height: 100vh;
+    padding: 1rem;
+    width: 40svh;
+    padding-top: 30px;
+}
+
+header .container .active-side-bar .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+header .container .active-side-bar .nav-links a {
+    font-size: 1.5rem;
+}
+
+.toggle {
+    display: none;
+}
+
 main {
-    margin-top: 12rem;
+    margin-top: 9rem;
+    transition: 0.5s;
 }
 
 main #hero-section {
@@ -91,8 +140,11 @@ main #hero-section {
 
 #hero-section .container-col .hero-image .image {
     width: 100%;
-    height: 400px;
-    background: red;
+    height: 70vh;
+    background: url("../heroImage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 10px;
 }
 
@@ -106,13 +158,16 @@ main #hero-section {
 }
 
 #showcase .showcase-container .showcase-conpanies {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    gap: 1rem;
+    display: none;
 }
 
-#showcase .showcase-container .showcase-conpanies span img {
-    width: 80%;
+#showcase .showcase-container .showcase-conpanies span {
+    width: 300px;
+    height: 100px;
+    background: red;
 }
 
 #showcase .showcase-container .services-container {
@@ -146,6 +201,8 @@ main #hero-section {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    cursor: pointer;
+    align-items: center;
 }
 
 #showcase .showcase-container .services-container .right .more-services .services-content .caption .open-close {
@@ -171,6 +228,18 @@ main #hero-section {
 
 #showcase .showcase-container .services-container .right .more-services .services-content .message {
     display: none;
+    font-size: 15px;
+}
+
+#showcase .showcase-container .services-container .right .more-services .services-content .message.showMessage{
+    display: block;
+}
+
+#showcase .showcase-container .services-container .right .more-services .services-content .showMessage {
+    font-size: 13px;
+    margin-top: 30px;
+    color: rgb(143, 143, 143);
+    line-height: 20px;
 }
 
 #showcase .showcase-container .services-container .right .more-services .view-service a {
@@ -227,7 +296,10 @@ main #hero-section {
 .work-container .work .work-image {
     width: 100%;
     height: 350px;
-    background: red;
+    background: url("/project1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .work-container .work-display {
@@ -240,16 +312,18 @@ main #hero-section {
 .work-container .work-display .work-2 .work-image {
     width: 100%;
     height: 350px;
-    background: url("../public/taskly.png");
-    background-position: top;
+    background: url("/project2.png");
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .work-container .work-display .work-2:nth-child(2) .work-image {
     width: 100%;
     height: 350px;
-    background: url('../public/nfrProject.png');
+    background: url("/project3.png");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -322,65 +396,119 @@ main #hero-section {
     font-size: 1.2rem;
 }
 
-#process-section .container .process-step .step .step-content p{
+#process-section .container .process-step .step .step-content p {
     margin-top: 5px;
 }
 
-.process-image-container{
+.process-image-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     margin-top: 4vw;
 }
 
-.process-image-container .image{
+.process-image-container .image {
     width: 100%;
     height: 300px;
-    background: red;
+    background: url("/process.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#testimony{
+.process-image-container .image:nth-child(2) {
+    width: 100%;
+    height: 300px;
+    background: url("/app-store-checklist-header.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#testimony {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
     padding: 2rem 5vw;
 }
 
-#testimony .container .head{
+#testimony .container .head {
     display: flex;
     justify-content: space-between;
-}   
+}
 
-#testimony .container .testimony-content{
+#testimony .container .testimony-content {
     margin-top: 2rem;
 }
 
-#testimony .container .testimony-content .testimony p{
+#testimony .container .testimony-content .testimony p {
     font-size: 1.4rem;
     width: 50%;
 }
 
-#testimony .container .testimony-content .testimony .client{
+#testimony .container .testimony-content .testimony .client {
     margin-top: 2rem;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#testimony .container .testimony-content .testimony .client .client-image{
+#testimony .container .testimony-content .testimony .client .client-image {
     width: 50px;
     height: 50px;
-    background: red;
+    background: url("/client.jpeg");
     border-radius: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+#testimony .container .testimony-content .testimony .client .client-two {
+    width: 50px;
+    height: 50px;
+    background: url("/clientOne.jpeg");
+    border-radius: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-#testimony .container .testimony-content .testimony .client .client-content{
+#testimony .container .testimony-content .testimony .client .client-three {
+    width: 50px;
+    height: 50px;
+    background: url("/clientTwo.jpeg");
+    border-radius: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#testimony .container .testimony-content .testimony .client .client-four {
+    width: 50px;
+    height: 50px;
+    background: url("/ClientThree.jpeg");
+    border-radius: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#testimony .container .testimony-content .testimony .client .client-five {
+    width: 50px;
+    height: 50px;
+    background: url("/clientFour.jpeg");
+    border-radius: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#testimony .container .testimony-content .testimony .client .client-content {
     display: flex;
     flex-direction: column;
 }
 
-#book{
+#book {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -388,44 +516,46 @@ main #hero-section {
     margin-top: 10vw;
 }
 
-#book .container{
+#book .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-#book .container h2{
+#book .container h2 {
     font-size: 2.5rem;
 }
 
-#book .container .book-content{
+#book .container .book-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-#book .container .book-content a{
+#book .container .book-content a {
     text-decoration: underline;
 }
-#mailing-list{
+
+#mailing-list {
     width: 80%;
     max-width: 1300px;
     padding: 40px 0;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
     margin: 100px auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    align-items: center;
+    gap: 20px;
 }
-#mailing-list .design-studio .img-card{
+#mailing-list .design-studio .img-card {
     height: 50px;
     width: 50px;
     background-color: white;
-    margin: 10px 40px;
+    margin-bottom: 10px;
 }
-#mailing-list .mailing-text{
-    margin:30px auto ;
-}
-#mailing-list .mailing-email{
-    margin: 30px ;
+#mailing-list .mailing-email {
+    margin: 30px;
     position: relative;
 }
 #mailing-list .mailing-email input {
@@ -437,29 +567,38 @@ main #hero-section {
     outline: none;
     color: white;
 }
-#mailing-list .mailing-email input::placeholder{
+#mailing-list .mailing-email input::placeholder {
     padding-left: 10px;
 }
-#mailing-list .mailing-email span{
+#mailing-list .mailing-email span {
     top: 10px;
     right: 5px;
     position: absolute;
     cursor: pointer;
 }
-#email-section{
+#email-section {
     max-width: 1300px;
     display: flex;
-    margin: 40px 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5rem;
 }
 
-#email-section .email-text h1{
+#email-section .email-text h1 {
     font-size: 35px;
     width: 400px;
 }
-#email-section > :nth-child(2){
+
+#email-section .email-text a{
+    font-size: 35px;
+    width: 400px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#email-section > :nth-child(2) {
     margin-top: 100px;
 }
-footer{
+footer {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -467,22 +606,126 @@ footer{
     margin-top: 10vw;
 }
 
-footer .container{ 
-    display: flex;
-    justify-content: space-between;
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-footer .container .right span{
+footer .container .right span {
     text-transform: capitalize;
 }
 
-
-footer .container .social{
-    display: flex;
-    gap: 25px;
+footer .container .social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-
-footer .container .social span{
+footer .container .social span {
     text-transform: capitalize;
 }
+
+@media (max-width: 768px) {
+    header .container nav {
+        display: none;
+    }
+    header .container .contact {
+        display: none;
+    }
+
+    header .container .active-side-bar {
+        position: absolute;
+        left: 0%;
+        top: 0rem;
+        background: var(--bg-color);
+        height: 100vh;
+        padding: 1rem;
+        width: 40svh;
+        padding-top: 30px;
+        transition: 0.5s;
+    }
+
+    header .container .active-side-bar .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 4rem;
+    }
+
+    header .container .active-side-bar .nav-links a {
+        font-size: 1.5rem;
+    }
+
+    .active-side-bar .close {
+        position: absolute;
+        right: 1rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #hero-section .container-col .col-1 .hero-content .content {
+        width: 100%;
+    }
+
+    .work-container .work .work-image {
+        margin-top: 1.2rem;
+    }
+    #showcase .showcase-container .services-container .right {
+        margin-top: 1rem;
+    }
+
+    #testimony .container .testimony-content .testimony p {
+        width: 100%;
+    }
+
+    #mailing-list .mailing-text {
+        margin-top: 20px;
+    }
+
+    #mailing-list .mailing-email input::placeholder {
+        padding-left: 0px;
+    }
+
+    #mailing-list .mailing-email {
+        margin: 0px;
+        margin-top: 20px;
+    }
+
+    #email-section {
+        display: none;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    footer .container .right {
+        color: gray;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 428px) {
+    #hero-section .container-col .col-1 h1 {
+        font-size: 3rem;
+    }
+
+    #work-section .container .head .head-content a {
+        display: none;
+    }
+
+    #process-section .container .head a {
+        display: none;
+    }
+}
+
+/* animation */
