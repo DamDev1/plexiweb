@@ -1,8 +1,8 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import Home from "./pages/Home";
-import Works from "./pages/Works";
 import Privacy from "./pages/Privacy";
+import OurWork from "./pages/OurWork";
 
 
 const route = createBrowserRouter([
@@ -13,13 +13,14 @@ const route = createBrowserRouter([
       {
         index: true,
         element: <Home/>
-      },{
-        path: 'works',
-        element: <Works />
       },
       {
         path:"privacy",
         element: <Privacy/>
+      },
+      {
+        path:"our-work",
+        element:<OurWork/>
       }
     ]
   }

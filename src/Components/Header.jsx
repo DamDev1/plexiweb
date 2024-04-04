@@ -29,7 +29,7 @@ export default function Header() {
           <div className="nav-links">
             <Link>HOME</Link>
             <Link>SERVICES</Link>
-            <Link>WORK</Link>
+            <Link to={'/our-work'}>WORK</Link>
             <Link>JOURNAL</Link>
           </div>
         </nav>

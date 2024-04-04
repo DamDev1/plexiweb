@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Autoplay} from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import ScrollTop from "../Components/ScrollTop";
 
 export default function Home() {
@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <main className="main">
-      <ScrollTop/>
+      <ScrollTop />
       <section id="hero-section" className="sec-1 showAnimation">
         <div className="container-col">
           <div className="col-1">
@@ -379,21 +379,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="mailing-list">
-        <div className="design-studio">
-          <div className="img-card"></div>
-          <p>DESIGN STUDIO</p>
-        </div>
-        <div className="mailing-text">
-          <p>JOIN OUR MONTHLY MAILING LIST</p>
-        </div>
-        <div className="mailing-email">
-          <input type="text" placeholder="YOUR EMAIL ADDRESS" />
-          <span>
-            <FaArrowRight />
-          </span>
-        </div>
-      </section>
+      <div className="mailingContainer">
+        <section id="mailing-list">
+          <div className="design-studio">
+            <div className="img-card"></div>
+            <p>DESIGN STUDIO</p>
+          </div>
+          <div className="mailing-text">
+            <p>JOIN OUR MONTHLY MAILING LIST</p>
+          </div>
+          <div className="mailing-email">
+            <input type="text" placeholder="YOUR EMAIL ADDRESS" />
+            <span>
+              <FaArrowRight />
+            </span>
+          </div>
+        </section>
+      </div>
       <section id="email-section">
         <div className="email-text">
           <h1>Let’s make something great together</h1>
