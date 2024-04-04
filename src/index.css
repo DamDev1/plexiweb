@@ -240,7 +240,17 @@ main #hero-section {
 .work-container .work-display .work-2 .work-image {
     width: 100%;
     height: 350px;
-    background: red;
+    background: url("../public/taskly.png");
+    background-position: top;
+    background-size: cover;
+}
+
+.work-container .work-display .work-2:nth-child(2) .work-image {
+    width: 100%;
+    height: 350px;
+    background: url('../public/nfrProject.png');
+    background-position: center;
+    background-size: cover;
 }
 
 .work-container .work-display .work-2 .work-content {
