@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBarsStaggered } from "react-icons/fa6";
 import AOS from "aos";
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 
 export default function Header() {
   const [activeSideBar, setActiveSideBar] = useState(true)
@@ -31,7 +31,7 @@ export default function Header() {
             <Link>ABOUT</Link>
             <Link to={'our-service'}>SERVICES</Link>
             <Link to={'/our-work'}>WORK</Link>
-            <Link to={'/our-work'}>PROCESS</Link>
+            <Link to={'/our-process'}>PROCESS</Link>
             <Link to={'/our-work'}>FAQ</Link>
           </div>
         </nav>
@@ -43,10 +43,11 @@ export default function Header() {
           <div className="close" onClick={handleSideBar}>X</div>
           <div className="nav-links">
             <Link to={'/'}>HOME</Link>
+            <Link>ABOUT</Link>
             <Link to={'our-service'}>SERVICES</Link>
             <Link to={'/our-work'}>WORK</Link>
-            <Link>JOURNAL</Link>
-            <Link>CONTACT</Link>
+            <Link to={'/our-process'}>PROCESS</Link>
+            <Link>FAQ</Link>
           </div>
         </div>
         <div className="toggle" onClick={handleSideBar}>
