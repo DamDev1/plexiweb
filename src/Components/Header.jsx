@@ -28,9 +28,11 @@ export default function Header() {
         <nav>
           <div className="nav-links">
             <Link>HOME</Link>
+            <Link>ABOUT</Link>
             <Link to={'our-service'}>SERVICES</Link>
             <Link to={'/our-work'}>WORK</Link>
-            <Link>JOURNAL</Link>
+            <Link to={'/our-work'}>PROCESS</Link>
+            <Link to={'/our-work'}>FAQ</Link>
           </div>
         </nav>
         <div className="contact">
